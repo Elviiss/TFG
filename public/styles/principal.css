@@ -1,0 +1,80 @@
+.cuerpo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  background-image: url("https://img.freepik.com/fotos-premium/fondo-textura-cartel-papel-arrugado-arrugado-blanco-blanco_293060-4178.jpg");
+  background-size: 100%;
+}
+.cuerpo .body1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: none;
+  color: white;
+  height: 1200px;
+  width: 100%;
+  margin-top: 250px;
+}
+.cuerpo .body1 .popu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  width: 100%;
+  height: 400px;
+}
+.cuerpo .body1 .popu .marcapopu {
+  justify-content: space-between;
+}
+.cuerpo .body1 .popu .marcapopu img {
+  width: 250px;
+  height: 180px;
+  margin: 20px;
+}
+.cuerpo .body1 .modelos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  width: 1200px;
+  height: 500px;
+}
+.cuerpo .body1 .modelos .modelopopu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: black;
+}
+.cuerpo .body1 .modelos .modelopopu .producto1 {
+  border: 1px solid;
+  width: 210px;
+  height: 280px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: none;
+  background: white;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.cuerpo .body1 .modelos .modelopopu .producto1 h2 {
+  font-size: 20px;
+}
+
+.gif1 {
+  position: absolute;
+  z-index: 0 !important;
+  border: none;
+  top: 120px;
+  left: 280px;
+}
+.gif1 img {
+  width: 800px;
+  height: 480px;
+  opacity: 1;
+  border: none;
+}/*# sourceMappingURL=principal.css.map */
