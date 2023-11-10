@@ -1,0 +1,86 @@
+<div class="paginanav">
+    <header class="header">   
+        <nav>
+            <ul class="links">
+                <li><a href="">Inicio</a></li> 
+                <li><a href="">Novedades</a></li> 
+                <li><a href="">Ofertas</a></li> 
+                <li><a href="">Marca</a></li> 
+            </ul>
+        </nav>
+
+        <div class="logotipo">
+            <div class="logo">
+                <img src="/sources/logoproyecto2.png" alt="">
+            </div>
+            <div class="logotipo2">
+                <img src="/sources/logoproyecto.png" alt="">
+            </div>
+        </div>
+    
+        <div class="boton1">
+            <a class="btn" href="#popup1"><button>Iniciar sesión</button></a>
+            <div id="popup1" class="caja-popup">
+                <div class="popup">
+                    <img src="/sources/logoproyecto.png">
+                    <a href="#" class="cerrar">&times;</a>
+                    <div class="linea">
+                        <a>Iniciar sesión</a>
+                        <a href="#popup2">Registrarme</a>
+                    </div>
+                    <div class="contenido">
+                        <input type="text" placeholder="Nombre de usuario">
+                        <input type="password" placeholder="Contraseña">
+                        <a class="btn" href="#"><button>Acceder</button></a>
+                    </div>
+                    <div class="linea"></div>
+                </div>
+            </div>
+
+            <div id="popup2" class="caja-popup">
+                <div class="popup">
+                    <h3>Introduce tus datos</h3>
+                    <a href="#" class="cerrar">&times;</a>
+                    <div class="linea"></div>
+                    <div class="contenido">
+                        <input type="email" placeholder="Introduce tu correo electrónico">
+                        <input type="text" placeholder="Nombre de usuario">
+                        <input type="password" placeholder="Contraseña">
+                        <input type="password" placeholder="Confirmar Contraseña">
+                        <a class="btn" href="#"><button>Registrarme</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="buscar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="gif1">
+        <img src="/sources/jordan.webp">
+    </div>
+
+</div>
+
+
+<script>
+    class Color {
+        constructor(barra, bajar){
+            this.barra = barra
+            this.bajar = bajar
+        }
+
+        cambiaColor(){
+            document.addEventListener("scroll", () => {
+                let bajar = window.scrollY;
+                (bajar >= 0 && bajar <= 1) ? this.barra.setAttribute("class", "header")
+                : this.barra.setAttribute("class", "color-negro")
+            })
+        }
+    }
+    let barra = document.querySelector(".header")
+    let bajar = window.scrollY
+    const color = new Color(barra, bajar)
+    color.cambiaColor()
+</script>
