@@ -10,7 +10,7 @@
         flex-direction: column
         align-items: center
         border: none
-        color: white
+        color: black
         height: 1200px
         width: 100%
         margin-top: 250px
@@ -28,6 +28,10 @@
                     width: 250px
                     height: 180px
                     margin: 20px
+                    &:hover
+                        transition: .5s
+                        cursor: pointer
+                        opacity: 0.5
         .modelos
             display: flex
             flex-direction: column
@@ -49,12 +53,19 @@
                     display: flex
                     flex-direction: column
                     align-items: center
-                    border: none
-                    background: white
+                    border: 1px solid grey
+                    background: #00000018
+                    box-shadow: 2px 2px 2px grey
                     background-size: 100% 100%
-                    background-repeat: no-repeat                 
+                    background-repeat: no-repeat   
+                    cursor: pointer
+                    &:hover
+                        transition: .5s
+                        box-shadow: 7px 7px 9px black             
                     h2
                         font-size: 20px
+                        margin-top: 20px
+                        margin-bottom: 20px
 
 
 .gif1

@@ -17,7 +17,6 @@
   z-index: 1;
   background-image: url("https://img.freepik.com/vector-premium/superficie-marmol-blanco-negro-fondo-textura-marmol_186931-432.jpg") !important;
   width: 100%;
-  transition: 1s;
 }
 .color-negro nav .links li a {
   color: black;
@@ -213,7 +212,7 @@
 }
 .header .boton1 .caja-popup .popup .contenido button, .color-negro .boton1 .caja-popup .popup .contenido button {
   font-weight: 1000;
-  color: white !important;
+  color: white;
   padding: 9px 40px;
   background: black;
   border: 2px solid black;
@@ -222,7 +221,9 @@
   margin-right: 90px;
 }
 .header .boton1 .caja-popup .popup .contenido button:hover, .color-negro .boton1 .caja-popup .popup .contenido button:hover {
+  transition: 0.5s;
   background: whitesmoke;
   color: black;
   border: 2px solid white;
+  box-shadow: 2px 2px 5px black;
 }/*# sourceMappingURL=header.css.map */
