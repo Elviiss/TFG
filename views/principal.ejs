@@ -1,7 +1,7 @@
 <body class="cuerpo">
     <div class="body1">
         <div class="gif1">
-            <img src="/sources/jordan.webp">
+            <img id="gif2" src="https://restocks.net/_next/image/?url=https%3A%2F%2Fcdn.restocks.net%2Fcdn-cgi%2Fimage%2Fwidth%3D1000%2Fstorage%2Fimages%2Fproducts%2FAQ4211-101%2F1.png&w=3840&q=75">
         </div>
         <div class="popu">
             <h1>Marcas Populares</h1>
@@ -49,3 +49,34 @@
         </div>
     </div>
 </body>
+
+
+<script>
+    let fotos = [
+        "https://restocks.net/_next/image/?url=https%3A%2F%2Fcdn.restocks.net%2Fcdn-cgi%2Fimage%2Fwidth%3D1000%2Fstorage%2Fimages%2Fproducts%2FAQ4211-101%2F1.png&w=3840&q=75",
+        "https://restocks.net/_next/image/?url=https%3A%2F%2Fcdn.restocks.net%2Fcdn-cgi%2Fimage%2Fwidth%3D1000%2Fstorage%2Fimages%2Fproducts%2FAQ4211-101%2F4.png&w=3840&q=75",
+        "https://restocks.net/_next/image/?url=https%3A%2F%2Fcdn.restocks.net%2Fcdn-cgi%2Fimage%2Fwidth%3D1000%2Fstorage%2Fimages%2Fproducts%2FAQ4211-101%2F3.png&w=3840&q=75",
+        "https://snkrs-mexico.com.mx/cdn/shop/files/air-force-1-travis-scott-sail-590.png?v=1689178579&width=852"
+    ]
+
+    var cont = 0
+
+    function gif(){
+        
+        if ( cont < 3){
+            document.getElementById("gif2").src=fotos[cont]
+        }
+        else{
+            document.getElementById("gif2").src=fotos[cont]
+            cont = cont - 4
+        }
+        cont++
+    }
+
+    function tiempo(){
+        setInterval(gif, 2500)
+    }
+    window.onload = tiempo
+
+
+</script>
