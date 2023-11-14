@@ -5,6 +5,7 @@
     width: 100%
     background-image: url("https://img.freepik.com/fotos-premium/fondo-textura-cartel-papel-arrugado-arrugado-blanco-blanco_293060-4178.jpg")
     background-size: 100%
+    z-index: 1
     .body1
         display: flex
         flex-direction: column
@@ -32,7 +33,7 @@
                         transition: .5s
                         cursor: pointer
                         opacity: 0.5
-        .modelos
+        .modelos, .popu
             display: flex
             flex-direction: column
             justify-content: center
@@ -40,11 +41,32 @@
             border: none
             width: 1200px
             height: 500px
+            .titulo
+                display: flex
+                flex-direction: row
+                justify-content: space-between
+                border: none
+                width: 95%
+                i
+                    border: none
+                    height: 100%
+                    width: 65px
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    font-size: 25px
+                    cursor: pointer
+                    &:hover
+                        font-size: 35px
+                        transition: .5s
             .modelopopu
                 display: flex
                 flex-direction: row
                 justify-content: space-between
                 color: black
+                a
+                    color: black
+                    text-decoration: none
                 .producto1
                     border: 1px solid
                     width: 210px
@@ -63,9 +85,21 @@
                         transition: .5s
                         box-shadow: 7px 7px 9px black             
                     h2
-                        font-size: 20px
-                        margin-top: 20px
-                        margin-bottom: 20px
+                        font-size: 18px
+                        margin-top: 10px
+                        text-align: center
+                        border: none
+                        height: 25%
+                        width: 95%
+                        font-family: 'Josefin Sans', sans-serif
+                    h3
+                        font-size: 13px
+                        
+                        border: none
+                    p
+                        border: none
+                        font-size: 30px
+                        font-family: 'Josefin Sans', sans-serif
 
 
 .gif1

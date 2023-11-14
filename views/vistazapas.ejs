@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Rambla&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&family=Pacifico&family=Rambla&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/header.css">
+    <link rel="stylesheet" href="/styles/footer.css">
+    <link rel="stylesheet" href="/styles/vistazapas.css">
+    <title>Document</title>
+</head>
+<body>
+    <%- include('./header.ejs') %>
+
+    <div class="vistasneakers">
+        <div class="gif4">
+            <img id="gif2" src="https://cdn.shopify.com/s/files/1/2358/2817/products/nike-air-force-1-high-07-sp-billie-eilish-wethenew-1_2.png?v=1649751847">
+        </div>
+
+        <div class="compra">
+            <div class="fotomodelo">
+                <img src="https://store.billieeilish.com/cdn/shop/products/DM7926-200_250084402_D_9Y_1X1_356d7cc1-5a95-43ac-9abe-83294b89a5de_1024x1024.png?v=1650815020">
+            </div>
+
+            <div class="informacion">
+                <div class="info">
+                    <h1>Nike Air Force 1 High '07 SP Billie Eilish</h1>
+                    <h2>Nike</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate veniam ad nulla, praesentium repellat perspiciatis quam non tempore dicta doloribus natus ut incidunt esse libero error in? Unde, qui accusamus?</p>
+                    <h3>Tallas</h3>
+                    <button>Comprar</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <%- include('./footer.ejs') %>
+</body>
+</html>
+
+
+<script>
+    let fotos = [
+        "https://cdn.shopify.com/s/files/1/2358/2817/products/nike-air-force-1-high-07-sp-billie-eilish-wethenew-1_2.png?v=1649751847",
+        "https://cdn.shopify.com/s/files/1/2358/2817/products/nike-air-force-1-high-07-sp-billie-eilish-wethenew-1_1.png?v=1649751847",
+        "https://www.truetosole.hu/cdn/shop/products/TruetoSole-NikeAirForce1High_07SPBillieEilishMushroom-DM7926-200-04_800x.png?v=1652358737",
+        "https://cdn.shopify.com/s/files/1/2358/2817/products/nike-air-force-1-high-07-sp-billie-eilish-wethenew-1_3.png?v=1649751847"
+    ]
+
+    var cont = 0
+
+    function gif(){
+        
+        if ( cont < 3){
+            document.getElementById("gif2").src=fotos[cont]
+        }
+        else{
+            document.getElementById("gif2").src=fotos[cont]
+            cont = cont - 4
+        }
+        cont++
+    }
+
+    function tiempo(){
+        setInterval(gif, 2500)
+    }
+    window.onload = tiempo
+
+
+</script>

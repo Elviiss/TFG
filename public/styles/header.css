@@ -212,7 +212,7 @@
 }
 .header .boton1 .caja-popup .popup .contenido button, .color-negro .boton1 .caja-popup .popup .contenido button {
   font-weight: 1000;
-  color: white;
+  color: white !important;
   padding: 9px 40px;
   background: black;
   border: 2px solid black;
@@ -222,8 +222,8 @@
 }
 .header .boton1 .caja-popup .popup .contenido button:hover, .color-negro .boton1 .caja-popup .popup .contenido button:hover {
   transition: 0.5s;
-  background: whitesmoke;
-  color: black;
-  border: 2px solid white;
+  background: whitesmoke !important;
+  color: black !important;
+  border: 2px solid white !important;
   box-shadow: 2px 2px 5px black;
 }/*# sourceMappingURL=header.css.map */

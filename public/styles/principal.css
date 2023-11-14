@@ -5,6 +5,7 @@
   width: 100%;
   background-image: url("https://img.freepik.com/fotos-premium/fondo-textura-cartel-papel-arrugado-arrugado-blanco-blanco_293060-4178.jpg");
   background-size: 100%;
+  z-index: 1;
 }
 .cuerpo .body1 {
   display: flex;
@@ -38,7 +39,7 @@
   cursor: pointer;
   opacity: 0.5;
 }
-.cuerpo .body1 .modelos {
+.cuerpo .body1 .modelos, .cuerpo .body1 .popu {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -47,13 +48,38 @@
   width: 1200px;
   height: 500px;
 }
-.cuerpo .body1 .modelos .modelopopu {
+.cuerpo .body1 .modelos .titulo, .cuerpo .body1 .popu .titulo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: none;
+  width: 95%;
+}
+.cuerpo .body1 .modelos .titulo i, .cuerpo .body1 .popu .titulo i {
+  border: none;
+  height: 100%;
+  width: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  cursor: pointer;
+}
+.cuerpo .body1 .modelos .titulo i:hover, .cuerpo .body1 .popu .titulo i:hover {
+  font-size: 35px;
+  transition: 0.5s;
+}
+.cuerpo .body1 .modelos .modelopopu, .cuerpo .body1 .popu .modelopopu {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   color: black;
 }
-.cuerpo .body1 .modelos .modelopopu .producto1 {
+.cuerpo .body1 .modelos .modelopopu a, .cuerpo .body1 .popu .modelopopu a {
+  color: black;
+  text-decoration: none;
+}
+.cuerpo .body1 .modelos .modelopopu .producto1, .cuerpo .body1 .popu .modelopopu .producto1 {
   border: 1px solid;
   width: 210px;
   height: 280px;
@@ -68,14 +94,27 @@
   background-repeat: no-repeat;
   cursor: pointer;
 }
-.cuerpo .body1 .modelos .modelopopu .producto1:hover {
+.cuerpo .body1 .modelos .modelopopu .producto1:hover, .cuerpo .body1 .popu .modelopopu .producto1:hover {
   transition: 0.5s;
   box-shadow: 7px 7px 9px black;
 }
-.cuerpo .body1 .modelos .modelopopu .producto1 h2 {
-  font-size: 20px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+.cuerpo .body1 .modelos .modelopopu .producto1 h2, .cuerpo .body1 .popu .modelopopu .producto1 h2 {
+  font-size: 18px;
+  margin-top: 10px;
+  text-align: center;
+  border: none;
+  height: 25%;
+  width: 95%;
+  font-family: "Josefin Sans", sans-serif;
+}
+.cuerpo .body1 .modelos .modelopopu .producto1 h3, .cuerpo .body1 .popu .modelopopu .producto1 h3 {
+  font-size: 13px;
+  border: none;
+}
+.cuerpo .body1 .modelos .modelopopu .producto1 p, .cuerpo .body1 .popu .modelopopu .producto1 p {
+  border: none;
+  font-size: 30px;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 .gif1 {
