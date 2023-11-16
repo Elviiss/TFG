@@ -2,6 +2,7 @@ const express = require("express")
 const path = require("path")
 const logger = require("morgan")
 const mainrouter = require("./routes/mainrouter.js")
+const myconecction = require('express-myconnection')
 
 const port = process.env.PORT ?? 3000
 
@@ -27,6 +28,4 @@ api.use("/",mainrouter)
 
 api.listen(port,()=>{
     console.log("server listening on port "+port)
-    console.log(process.env.JOKER)
-    console.log("\nenviroment ==> "+process.env.ENVIROMENT)
 })

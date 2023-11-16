@@ -47,18 +47,44 @@
                 justify-content: space-between
                 border: none
                 width: 95%
-                i
+                .vermas
                     border: none
-                    height: 100%
-                    width: 65px
+                    width: 120px
+                    height: 40px
                     display: flex
-                    justify-content: center
+                    flex-direction: row
+                    justify-content: right
+                    text-align: center
                     align-items: center
-                    font-size: 25px
+                    border-radius: 20px
                     cursor: pointer
+                    background: linear-gradient(to right, #ffffff00 50%, black 50%)
+                    background-position: left bottom
+                    background-size: 200% 100%
+                    transition: all .5s ease-out
+                    transition-timing-function: linear
+                    h1
+                        font-size: 20px
                     &:hover
-                        font-size: 35px
+                        background-position: right bottom
+                        color: white
+                        
+                    i
+                        border: none
+                        height: 100%
+                        width: 40px
+                        border-radius: 100%
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        font-size: 25px
+                        cursor: pointer
+                        color: black
+                        background: none
+                        margin-right: 0
+                    &:hover i
                         transition: .5s
+                        color: white
             .modelopopu
                 display: flex
                 flex-direction: row
