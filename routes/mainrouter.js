@@ -4,8 +4,13 @@ const mainrouter = Router()
 
 
 mainrouter.get("/", async (req,res) => {
-    res.render("main")
     console.log(await pool.query('SELECT * FROM zapa'))
+
+    const [zapass] = await pool.query('SELECT * FROM zapa')
+    console.log(zapass)
+    console.log(zapass.id)
+
+    res.render("main", {zapass})
 
 } )
 

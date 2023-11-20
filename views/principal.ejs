@@ -106,6 +106,31 @@
             </div>
         </div>
     </div>
+    <td><%- zapass.length %></td>
+    <td><%- zapass %></td>
+
+    <table>
+        <thead>
+            <tr>
+                <th>hola</th>
+                <th>hola</th>
+                <th>hola</th>
+                <th>hola</th>
+                <th>hola</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% if (zapass) { %>
+                <% for (var i = 0; i < zapass.length; i++){ %>
+                    <tr>
+                        <td><%= (i + 1) %></td>
+                        <td><%= zapass[i].marca %></td>
+                        <td><%= zapass[i].modelo%></td>
+                    </tr>
+                <% } %>
+            <% } %>
+        </tbody>
+    </table>
 </body>
 
 
