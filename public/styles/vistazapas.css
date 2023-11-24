@@ -9,30 +9,38 @@
   width: 100%;
   height: 500px;
 }
-.vistasneakers .compra .fotomodelo {
-  width: 50%;
-  height: 500px;
-  border: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.vistasneakers .compra .fotomodelo img {
-  width: 450px;
-  height: 450px;
-  border: none;
-  align-items: center;
-}
 .vistasneakers .compra .informacion {
+  width: 100%;
+  height: 500px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.vistasneakers .compra .informacion .info2 {
+  width: 50%;
+  height: 400px;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+.vistasneakers .compra .informacion .info2 .fotomodelo {
   width: 50%;
   height: 500px;
   border: none;
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+.vistasneakers .compra .informacion .info2 .fotomodelo img {
+  width: 500px;
+  border: none;
   align-items: center;
 }
 .vistasneakers .compra .informacion .info {
-  width: 90%;
+  width: 50%;
   height: 400px;
   border: none;
   display: flex;
@@ -40,19 +48,20 @@
   align-items: center;
   justify-content: space-around;
 }
-.vistasneakers .compra .informacion .info h1 {
+.vistasneakers .compra .informacion .info .modelo {
   font-size: 30px;
+  font-weight: 900;
   text-align: center;
 }
-.vistasneakers .compra .informacion .info h2 {
+.vistasneakers .compra .informacion .info .marca {
   text-align: center;
   font-size: 20px;
+  font-weight: 600;
 }
-.vistasneakers .compra .informacion .info p {
+.vistasneakers .compra .informacion .info .texto {
   font-size: 17px;
   border: none;
   width: 80%;
-  margin-top: 30px;
 }
 .vistasneakers .compra .informacion .info .selectalla {
   border-top: 1px solid;
@@ -83,9 +92,9 @@
   color: #000000;
   padding: 5px;
   text-decoration: none;
-  margin-left: 50px;
 }
 .vistasneakers .compra .informacion .info .selectalla .opciontalla p:hover {
+  cursor: pointer;
   color: #FFFFFF;
   background-color: black;
 }
@@ -106,6 +115,7 @@
   border-radius: 5px;
   cursor: pointer;
   align-items: center;
+  margin-left: 80px;
 }
 .vistasneakers .compra .informacion .info #botoncomprar:hover {
   transition: 0.5s;

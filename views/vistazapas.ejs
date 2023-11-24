@@ -23,38 +23,41 @@
             <img id="gif2" src="https://cdn.shopify.com/s/files/1/2358/2817/products/nike-air-force-1-high-07-sp-billie-eilish-wethenew-1_2.png?v=1649751847">
         </div>
 
-        <div class="compra">
-            <div class="fotomodelo">
-                <img src="https://store.billieeilish.com/cdn/shop/products/DM7926-200_250084402_D_9Y_1X1_356d7cc1-5a95-43ac-9abe-83294b89a5de_1024x1024.png?v=1650815020">
-            </div>
-
-            <div class="informacion">
-                <div class="info">
-                    <h1>Nike Air Force 1 High '07 SP Billie Eilish</h1>
-                    <h2>Nike</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate veniam ad nulla, praesentium repellat perspiciatis quam non tempore dicta doloribus natus ut incidunt esse libero error in? Unde, qui accusamus?</p>
-                    <div class="selectalla">
-                        <button>Tallas</button>
-                        <i class="fa-solid fa-angle-up"></i>
-                        <div class="opciontalla">
-                            <p>38</p>
-                            <p>39</p>
-                            <p>40</p>
-                            <p>41</p>
-                            <p>42</p>
-                            <p>43</p>
-                            <p>43</p>
-                            <p>44</p>
-                            <p>45</p>
-                        </div>
-                    </div>
-                    <button id="botoncomprar">Comprar</button>
-                </div>
-            </div>
-        </div>
-
+        <table class="compra">
+            <thead class="informacion">
+                <% if (zapasss) { %>
+                    <% for (var i = 0; i < zapasss.length; i++){ %>
+                        <tr class="info2">
+                            <td class="fotomodelo"><img src=<%= zapasss[i].foto %>></td>                      
+                            <tr class="info">
+                                <td class="modelo"><%= zapasss[i].modelo %></td>
+                                <td class="marca"><%= zapasss[i].marca %></td>
+                                <td class="texto"><p>Billie Eilish dice que no hace falta que te llamen activista para poder hablar de temas importantes. Por eso, las Nike x Billie Eilish AF1 encarnan ese mensaje. Como sabemos que cada acción cuenta, hemos colaborado con Billie para convertir las AF1 en un diseño futurista.</p></td>
+                                <td><div class="selectalla">
+                                    <button>Tallas</button>
+                                    <i class="fa-solid fa-angle-up"></i>
+                                    <div class="opciontalla">
+                                        <p>38</p>
+                                        <p>39</p>
+                                        <p>40</p>
+                                        <p>41</p>
+                                        <p>42</p>
+                                        <p>43</p>
+                                        <p>43</p>
+                                        <p>44</p>
+                                        <p>45</p>
+                                    </div>
+                                </div>
+                                <button id="botoncomprar">Comprar</button></td>   
+                            </tr>
+                        </tr>
+                    <% } %>
+                <% } %>
+            </thead>
+        </table>
     </div>
 
+    
 
 
     <%- include('./footer.ejs') %>
@@ -88,6 +91,5 @@
         setInterval(gif, 2500)
     }
     window.onload = tiempo
-
-
+    
 </script>

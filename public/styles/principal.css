@@ -126,7 +126,7 @@
   transition: 0.5s;
   box-shadow: 7px 7px 9px black;
 }
-.cuerpo .body1 .modelos .modelopopu .producto1 h2, .cuerpo .body1 .popu .modelopopu .producto1 h2 {
+.cuerpo .body1 .modelos .modelopopu .producto1 .modelo, .cuerpo .body1 .popu .modelopopu .producto1 .modelo {
   font-size: 18px;
   margin-top: 10px;
   text-align: center;
@@ -135,11 +135,11 @@
   width: 95%;
   font-family: "Josefin Sans", sans-serif;
 }
-.cuerpo .body1 .modelos .modelopopu .producto1 h3, .cuerpo .body1 .popu .modelopopu .producto1 h3 {
+.cuerpo .body1 .modelos .modelopopu .producto1 .marca, .cuerpo .body1 .popu .modelopopu .producto1 .marca {
   font-size: 13px;
   border: none;
 }
-.cuerpo .body1 .modelos .modelopopu .producto1 p, .cuerpo .body1 .popu .modelopopu .producto1 p {
+.cuerpo .body1 .modelos .modelopopu .producto1 .precio, .cuerpo .body1 .popu .modelopopu .producto1 .precio {
   border: none;
   font-size: 30px;
   font-family: "Josefin Sans", sans-serif;
