@@ -18,5 +18,10 @@ mainrouter.get("/vistazapas/:id", async(req,res) => {
     res.render("vistazapas", {zapasss})
 } )
 
+mainrouter.get("/vermaszapas", async (req,res) => { 
+    const [zapass] = await pool.query('SELECT * FROM zapa')
+    res.render("vermaszapas", {zapass})
+} )
+
 
 module.exports = mainrouter

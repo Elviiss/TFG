@@ -35,7 +35,7 @@
   margin: 20px;
 }
 .cuerpo .body1 .popu .marcapopu img:hover {
-  transition: 0.5s;
+  transition: 0.3s;
   cursor: pointer;
   opacity: 0.5;
 }

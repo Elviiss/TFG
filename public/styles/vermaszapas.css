@@ -1,0 +1,110 @@
+.modelos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid blue;
+  width: 100%;
+  height: 1500px;
+}
+.modelos .titulo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: none;
+  width: 95%;
+}
+.modelos .titulo .vermas {
+  border: none;
+  width: 120px;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  text-align: center;
+  align-items: center;
+  border-radius: 20px;
+  cursor: pointer;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 50%, black 50%);
+  background-position: left bottom;
+  background-size: 200% 100%;
+  transition: all 0.5s ease-out;
+  transition-timing-function: linear;
+}
+.modelos .titulo .vermas h1 {
+  font-size: 20px;
+}
+.modelos .titulo .vermas:hover {
+  background-position: right bottom;
+  color: white;
+}
+.modelos .titulo .vermas i {
+  border: none;
+  height: 100%;
+  width: 40px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  cursor: pointer;
+  color: black;
+  background: none;
+  margin-right: 0;
+}
+.modelos .titulo .vermas:hover i {
+  transition: 0.5s;
+  color: white;
+}
+.modelos .modelopopu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: black;
+  border: 2px solid red;
+  flex-wrap: wrap;
+  width: 1000px;
+  height: 900px;
+  margin-left: 300px;
+}
+.modelos .modelopopu a {
+  color: black;
+  text-decoration: none;
+}
+.modelos .modelopopu .producto1 {
+  border: 1px solid;
+  width: 210px;
+  height: 280px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid grey;
+  background: rgba(0, 0, 0, 0.0941176471);
+  box-shadow: 2px 2px 2px grey;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+.modelos .modelopopu .producto1:hover {
+  transition: 0.5s;
+  box-shadow: 7px 7px 9px black;
+}
+.modelos .modelopopu .producto1 .modelo {
+  font-size: 18px;
+  margin-top: 10px;
+  text-align: center;
+  border: none;
+  height: 25%;
+  width: 95%;
+  font-family: "Josefin Sans", sans-serif;
+}
+.modelos .modelopopu .producto1 .marca {
+  font-size: 13px;
+  border: none;
+}
+.modelos .modelopopu .producto1 .precio {
+  border: none;
+  font-size: 30px;
+  font-family: "Josefin Sans", sans-serif;
+}/*# sourceMappingURL=vermaszapas.css.map */
