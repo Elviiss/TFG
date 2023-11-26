@@ -22,12 +22,12 @@
                 <a href="/vermaszapas"><i class="fa-solid fa-angle-right"></i></a>
             </div>
             
-            <table class="modelos">
+            <table>
                 <thead class="modelopopu">
                     <% if (zapass) { %>
                         <% for (var i = 0; i < 5; i++){ %>
                             <tr class="producto1"> 
-                                <td><a href="/vistazapas/<%= zapass[i].id %>"><img src=<%= zapass[i].foto %> width="210px"></a></td>
+                                <td><a href="/vistazapas/<%= zapass[i].id %>"><img src=<%= zapass[i].foto %> width="210px"></a></td> 
                                 <td class="marca"><a href="/vistazapas/<%= zapass[i].id %>"><%= zapass[i].marca %></a></td>
                                 <td class="modelo"><a href="/vistazapas/<%= zapass[i].id %>"><%= zapass[i].modelo %></a></td>
                                 <td class="precio"><a href="/vistazapas/<%= zapass[i].id %>"><%= zapass[i].precio %>€</a></td>     

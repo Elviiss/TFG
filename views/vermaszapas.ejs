@@ -25,7 +25,10 @@
                 <% if (zapass) { %>
                     <% for (var i = 0; i < zapass.length; i++){ %>
                         <tr class="producto1"> 
-                            <td><a href="/vistazapas/<%= zapass[i].id %>"><img src=<%= zapass[i].foto %> width="210px"></a></td>
+                            <td class="fotos">
+                                <a class="foto1" href="/vistazapas/<%= zapass[i].id %>"><img src=<%= zapass[i].foto %> width="210px"></a>
+                                <a class="foto2" href="/vistazapas/<%= zapass[i].id %>"><img src=<%= zapass[i].foto2 %> width="210px"></a>
+                            </td>
                             <td class="marca"><a href="/vistazapas/<%= zapass[i].id %>"><%= zapass[i].marca %></a></td>
                             <td class="modelo"><a href="/vistazapas/<%= zapass[i].id %>"><%= zapass[i].modelo %></a></td>
                             <td class="precio"><a href="/vistazapas/<%= zapass[i].id %>"><%= zapass[i].precio %>€</a></td>     
