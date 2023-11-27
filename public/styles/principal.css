@@ -144,6 +144,22 @@
   font-size: 30px;
   font-family: "Josefin Sans", sans-serif;
 }
+.cuerpo .body1 .modelos .modelopopu .producto1 .fotos, .cuerpo .body1 .popu .modelopopu .producto1 .fotos {
+  position: relative;
+}
+.cuerpo .body1 .modelos .modelopopu .producto1 .fotos .foto2, .cuerpo .body1 .popu .modelopopu .producto1 .fotos .foto2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+  opacity: 0;
+}
+.cuerpo .body1 .modelos .modelopopu .producto1 .fotos:hover .foto1, .cuerpo .body1 .popu .modelopopu .producto1 .fotos:hover .foto1 {
+  opacity: 0;
+}
+.cuerpo .body1 .modelos .modelopopu .producto1 .fotos:hover .foto2, .cuerpo .body1 .popu .modelopopu .producto1 .fotos:hover .foto2 {
+  opacity: 1;
+}
 
 .gif1 {
   position: absolute;

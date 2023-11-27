@@ -1,20 +1,61 @@
-.modelos {
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  background-image: url("https://img.freepik.com/fotos-premium/fondo-textura-cartel-papel-arrugado-arrugado-blanco-blanco_293060-4178.jpg");
+  background-size: 100%;
+  z-index: 1;
+}
+body .body1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: none;
+  color: black;
+  height: 1800px;
+  width: 100%;
+}
+body .body1 .gif1 {
+  position: absolute;
+  z-index: 0 !important;
+  background-image: url("https://img.freepik.com/fotos-premium/medio-fondo-blanco-negro-horizontal_146508-738.jpg");
+  background-size: 100% 100%;
+  border: none;
+  top: 120px;
+  left: 280px;
+  width: 800px;
+  height: 417px;
+  display: flex;
+  flex-direction: row;
+}
+body .body1 .gif1 img {
+  width: 50%;
+  height: 100%;
+}
+body .body1 .gif1 h1 {
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  margin-top: 170px;
+}
+body .body1 .modelos {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid blue;
+  border: none;
   width: 100%;
   height: 1500px;
 }
-.modelos .titulo {
+body .body1 .modelos .titulo {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   border: none;
   width: 95%;
 }
-.modelos .titulo .vermas {
+body .body1 .modelos .titulo .vermas {
   border: none;
   width: 120px;
   height: 40px;
@@ -31,14 +72,14 @@
   transition: all 0.5s ease-out;
   transition-timing-function: linear;
 }
-.modelos .titulo .vermas h1 {
+body .body1 .modelos .titulo .vermas h1 {
   font-size: 20px;
 }
-.modelos .titulo .vermas:hover {
+body .body1 .modelos .titulo .vermas:hover {
   background-position: right bottom;
   color: white;
 }
-.modelos .titulo .vermas i {
+body .body1 .modelos .titulo .vermas i {
   border: none;
   height: 100%;
   width: 40px;
@@ -52,11 +93,11 @@
   background: none;
   margin-right: 0;
 }
-.modelos .titulo .vermas:hover i {
+body .body1 .modelos .titulo .vermas:hover i {
   transition: 0.5s;
   color: white;
 }
-.modelos .modelopopu {
+body .body1 .modelos .modelopopu {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -67,11 +108,11 @@
   height: 900px;
   margin-left: 300px;
 }
-.modelos .modelopopu a {
+body .body1 .modelos .modelopopu a {
   color: black;
   text-decoration: none;
 }
-.modelos .modelopopu .producto1 {
+body .body1 .modelos .modelopopu .producto1 {
   border: 1px solid;
   width: 210px;
   height: 280px;
@@ -86,11 +127,11 @@
   background-repeat: no-repeat;
   cursor: pointer;
 }
-.modelos .modelopopu .producto1:hover {
+body .body1 .modelos .modelopopu .producto1:hover {
   transition: 0.5s;
   box-shadow: 7px 7px 9px black;
 }
-.modelos .modelopopu .producto1 .modelo {
+body .body1 .modelos .modelopopu .producto1 .modelo {
   font-size: 18px;
   margin-top: 10px;
   text-align: center;
@@ -99,28 +140,28 @@
   width: 95%;
   font-family: "Josefin Sans", sans-serif;
 }
-.modelos .modelopopu .producto1 .marca {
+body .body1 .modelos .modelopopu .producto1 .marca {
   font-size: 13px;
   border: none;
 }
-.modelos .modelopopu .producto1 .precio {
+body .body1 .modelos .modelopopu .producto1 .precio {
   border: none;
   font-size: 30px;
   font-family: "Josefin Sans", sans-serif;
 }
-.modelos .modelopopu .producto1 .fotos {
+body .body1 .modelos .modelopopu .producto1 .fotos {
   position: relative;
 }
-.modelos .modelopopu .producto1 .fotos .foto2 {
+body .body1 .modelos .modelopopu .producto1 .fotos .foto2 {
   position: absolute;
   top: 0;
   left: 0;
   transition: 0.5s;
   opacity: 0;
 }
-.modelos .modelopopu .producto1 .fotos:hover .foto1 {
+body .body1 .modelos .modelopopu .producto1 .fotos:hover .foto1 {
   opacity: 0;
 }
-.modelos .modelopopu .producto1 .fotos:hover .foto2 {
+body .body1 .modelos .modelopopu .producto1 .fotos:hover .foto2 {
   opacity: 1;
 }/*# sourceMappingURL=vermaszapas.css.map */

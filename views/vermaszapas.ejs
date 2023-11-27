@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&family=Pacifico&family=Rambla&display=swap" rel="stylesheet">
@@ -14,29 +15,35 @@
 <body>
     <%- include('./header.ejs') %>
 
-    <div class="modelos">
-        <div class="titulo">
-            <h1>Modelos más populares</h1>
-            <i class="fa-solid fa-angle-right"></i>
+    <div class="body1">
+        <div class="gif1">
+            <img id="gif2" src="https://solesavy.com/wp-content/uploads/2023/10/amm-min.png">
+            <h1>Nuevos modelos ya <span style="color: whitesmoke;">disponibles</span></h1>
         </div>
-        
-        <table>
-            <thead class="modelopopu">
-                <% if (zapass) { %>
-                    <% for (var i = 0; i < zapass.length; i++){ %>
-                        <tr class="producto1"> 
-                            <td class="fotos">
-                                <a class="foto1" href="/vistazapas/<%= zapass[i].id %>"><img src=<%= zapass[i].foto %> width="210px"></a>
-                                <a class="foto2" href="/vistazapas/<%= zapass[i].id %>"><img src=<%= zapass[i].foto2 %> width="210px"></a>
-                            </td>
-                            <td class="marca"><a href="/vistazapas/<%= zapass[i].id %>"><%= zapass[i].marca %></a></td>
-                            <td class="modelo"><a href="/vistazapas/<%= zapass[i].id %>"><%= zapass[i].modelo %></a></td>
-                            <td class="precio"><a href="/vistazapas/<%= zapass[i].id %>"><%= zapass[i].precio %>€</a></td>     
-                        </tr>
+        <div class="modelos">
+            <div class="titulo">
+                <h1>Modelos más populares</h1>
+                <i class="fa-solid fa-angle-right"></i>
+            </div>
+            
+            <table>
+                <thead class="modelopopu">
+                    <% if (zapass) { %>
+                        <% for (var i = 0; i < zapass.length; i++){ %>
+                            <tr class="producto1"> 
+                                <td class="fotos">
+                                    <a class="foto1" href="/vistazapas/<%= zapass[i].id %>"><img src=<%= zapass[i].foto %> width="210px"></a>
+                                    <a class="foto2" href="/vistazapas/<%= zapass[i].id %>"><img src=<%= zapass[i].foto2 %> width="210px"></a>
+                                </td>
+                                <td class="marca"><a href="/vistazapas/<%= zapass[i].id %>"><%= zapass[i].marca %></a></td>
+                                <td class="modelo"><a href="/vistazapas/<%= zapass[i].id %>"><%= zapass[i].modelo %></a></td>
+                                <td class="precio"><a href="/vistazapas/<%= zapass[i].id %>"><%= zapass[i].precio %>€</a></td>     
+                            </tr>
+                        <% } %>
                     <% } %>
-                <% } %>
-            </thead>
-        </table>
+                </thead>
+            </table>
+        </div>
     </div>
 
     <%- include('./footer.ejs') %>
