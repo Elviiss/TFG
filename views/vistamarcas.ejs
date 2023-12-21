@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/header.css">
+    <link rel="stylesheet" href="/styles/footer.css">
+    <link rel="stylesheet" href="/styles/vistamarcas.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&family=Pacifico&family=Rambla&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&family=Nova+Square&family=Pacifico&family=Rambla&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <%- include('./header.ejs') %>
+
+
+    <div class="body1">
+        <div class="portada">
+            <h1>Nuevos modelos ya disponibles</h1>
+            <div>
+                <img src="https://images-ext-1.discordapp.net/external/oYqr07ZtA7EDtet32Ap4WLsR4CgwI5WcJwCaki31gps/https/i.pinimg.com/564x/60/ca/cb/60cacb1072897e73de5afe71c7481e83.jpg?format=webp&width=399&height=395">
+    
+                <img src="https://i.pinimg.com/564x/03/7e/12/037e12a70bba9fe20892f91aafeaae96.jpg" width="400px" height="400px">
+            </div>
+            <div>
+                <h2>Air Force x Vlone</h2>
+                <h2>Jordan Retro 4 x KAWS</h2>
+            </div>
+        </div>
+    
+        <div class="popu">
+            <div class="titulo">
+                <h1>Marcas Populares</h1>
+            </div>
+            <table>
+                <thead class="marcapopu">
+                    <% if (marcaprincii) { %>
+                        <% for (var i = 0; i < 4; i++){ %>
+                            <tr> 
+                                <td class="fotos">
+                                    <a class="foto1" href="/vermasmarcas<%= marcaprincii[i].marca %>"><img src=<%= marcaprincii[i].foto %> width="210px"></a>
+                                </td>    
+                            </tr>
+                        <% } %>
+                    <% } %>
+                </thead>
+            </table>
+        </div>
+    </div>
+
+
+    <%- include('./footer.ejs') %>
+</body>
+</html>

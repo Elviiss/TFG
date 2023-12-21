@@ -27,6 +27,8 @@
   height: 400px;
 }
 .cuerpo .body1 .popu .marcapopu {
+  display: flex;
+  flex-direction: row;
   justify-content: space-between;
 }
 .cuerpo .body1 .popu .marcapopu img {

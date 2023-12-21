@@ -1,0 +1,72 @@
+.body1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: black;
+  background-image: url("https://img.freepik.com/fotos-premium/fondo-textura-cartel-papel-arrugado-arrugado-blanco-blanco_293060-4178.jpg");
+  background-size: 100%;
+  height: 100%;
+  width: 100%;
+}
+.body1 .portada {
+  position: absolute;
+  z-index: 0 !important;
+  background-image: url("https://png.pngtree.com/background/20230518/original/pngtree-wall-stone-with-black-wall-photo-picture-image_2648109.jpg");
+  background-size: 100% 100%;
+  border: none;
+  top: 90px;
+  width: 100%;
+  height: 86%;
+  display: flex;
+  flex-direction: column;
+}
+.body1 .portada h1 {
+  color: black;
+  font-size: 30px;
+  width: 100%;
+  height: 12%;
+  text-align: center;
+  font-family: "Bungee", sans-serif;
+}
+.body1 .portada h2 {
+  margin-top: 10px;
+}
+.body1 .portada div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.body1 .portada div img {
+  box-shadow: 5px 5px 15px;
+}
+.body1 .popu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin-top: 330px;
+}
+.body1 .popu .marcapopu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.body1 .popu .marcapopu img {
+  width: 250px;
+  height: 180px;
+  margin: 20px;
+}
+.body1 .popu .marcapopu img:hover {
+  transition: 0.3s;
+  cursor: pointer;
+  opacity: 0.5;
+}
+.body1 .popu .titulo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: none;
+  width: 95%;
+}/*# sourceMappingURL=vistamarcas.css.map */

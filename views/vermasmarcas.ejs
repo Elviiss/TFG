@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/header.css">
+    <link rel="stylesheet" href="/styles/footer.css">
+    <link rel="stylesheet" href="/styles/vermaszapas.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&family=Pacifico&family=Rambla&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&family=Nova+Square&family=Pacifico&family=Rambla&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <%- include('./header.ejs') %>
+    
+    <div class="body1">
+        <div class="portada">
+            <h1>Nuevos modelos ya disponibles</h1>
+            <div>
+                <img src="https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2016%2F11%2Fasap-bari-vlone-nike-air-force-1-1.jpg?cbr=1&q=90" width="500px" height="400px">
+
+                <img src="https://i.pinimg.com/originals/d4/e8/7b/d4e87bc394cd8f27d36263c4afbc2012.jpg" width="500px" height="400px">
+            </div>
+            <div>
+                <h2>Air Force x Vlone</h2>
+                <h2>Jordan Retro 4 x KAWS</h2>
+            </div>
+        </div>
+        <div class="modelos">
+            <div class="titulo">
+                <h1>Modelos más populares</h1>
+            </div>
+            
+            <table>
+                <thead class="modelopopu">
+                    <% if (zapass) { %>
+                        <% for (var i = 0; i < zapass.length; i++){ %>
+                            <tr class="producto1"> 
+                                <td class="fotos">
+                                    <a class="foto1" href="/vistazapas/<%= zapass[i].id %>"><img src=<%= zapass[i].foto %> width="210px"></a>
+                                    <a class="foto2" href="/vistazapas/<%= zapass[i].id %>"><img src=<%= zapass[i].foto2 %> width="210px"></a>
+                                </td>
+                                <td class="marca"><a href="/vistazapas/<%= zapass[i].id %>"><%= zapass[i].marca %></a></td>
+                                <td class="modelo"><a href="/vistazapas/<%= zapass[i].id %>"><%= zapass[i].modelo %></a></td>
+                                <td class="precio"><a href="/vistazapas/<%= zapass[i].id %>"><%= zapass[i].precio %>€</a></td>     
+                            </tr>
+                        <% } %>
+                    <% } %>
+                </thead>
+            </table>
+        </div>
+    </div>
+
+    <%- include('./footer.ejs') %>
+</body>
+</html>

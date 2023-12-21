@@ -62,7 +62,10 @@
   height: 80px;
 }
 .header .logotipo .logo img, .color-negro .logotipo .logo img {
-  width: 80px;
+  width: 60px;
+  height: 60px;
+  border-radius: 20%;
+  margin-top: 12px;
 }
 .header .logotipo .logotipo2, .color-negro .logotipo .logotipo2 {
   position: absolute;
@@ -72,7 +75,10 @@
   transition: 0.5s;
 }
 .header .logotipo .logotipo2 img, .color-negro .logotipo .logotipo2 img {
-  width: 80px;
+  width: 60px;
+  height: 60px;
+  border-radius: 20%;
+  margin-top: 12px;
 }
 .header nav .links, .color-negro nav .links {
   border: none;
