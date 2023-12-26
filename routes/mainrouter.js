@@ -26,9 +26,9 @@ mainrouter.get("/vermaszapas", async (req,res) => {
     res.render("vermaszapas", {zapass})
 } )
 
-mainrouter.get("/vermasmarcas:marca", async (req,res) => { 
-    const [zapass] = await pool.query('SELECT * FROM zapa where marca = ?', req.params.marca)
-    const [marcaprincii] = await pool.query('SELECT * FROM marcaprinci')
+mainrouter.get("/vermasmarcas/:marca", async (req,res) => { 
+    const [zapass] = await pool.query('SELECT * FROM zapa where marca = ?', [req.params.marca])
+    const [marcaprincii] = await pool.query('SELECT * FROM marcaprinci where marca = ?', [req.params.marca])
     console.log(req.params.marca)
     res.render("vermasmarcas", {zapass,marcaprincii})
 } )

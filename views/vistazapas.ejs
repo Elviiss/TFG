@@ -19,16 +19,22 @@
     <%- include('./header.ejs') %>
 
     <div class="vistasneakers">
-        <div class="gif4">
-            <img id="gif2" src="https://cdn.shopify.com/s/files/1/2358/2817/products/nike-air-force-1-high-07-sp-billie-eilish-wethenew-1_2.png?v=1649751847">
-        </div>
+        <table class="gif4">
+            <% if (zapasss) { %>
+                <% for (var i = 0; i < zapasss.length; i++){ %>
+                    <tr class="info2">
+                        <td class="fotomodelo"><img id="gif2" src=<%= zapasss[i].foto %>></td>                      
+                    </tr>
+                <% } %>
+            <% } %>
+        </table>
 
         <table class="compra">
             <thead class="informacion">
                 <% if (zapasss) { %>
                     <% for (var i = 0; i < zapasss.length; i++){ %>
                         <tr class="info2">
-                            <td class="fotomodelo"><img src=<%= zapasss[i].foto %>></td>                      
+                            <td class="fotomodelo"><img src=<%= zapasss[i].foto2 %>></td>                      
                             <tr class="info">
                                 <td class="modelo"><%= zapasss[i].modelo %></td>
                                 <td class="marca"><%= zapasss[i].marca %></td>
@@ -63,33 +69,3 @@
     <%- include('./footer.ejs') %>
 </body>
 </html>
-
-
-<script>
-    let fotos = [
-        "https://cdn.shopify.com/s/files/1/2358/2817/products/nike-air-force-1-high-07-sp-billie-eilish-wethenew-1_2.png?v=1649751847",
-        "https://cdn.shopify.com/s/files/1/2358/2817/products/nike-air-force-1-high-07-sp-billie-eilish-wethenew-1_1.png?v=1649751847",
-        "https://www.truetosole.hu/cdn/shop/products/TruetoSole-NikeAirForce1High_07SPBillieEilishMushroom-DM7926-200-04_800x.png?v=1652358737",
-        "https://cdn.shopify.com/s/files/1/2358/2817/products/nike-air-force-1-high-07-sp-billie-eilish-wethenew-1_3.png?v=1649751847"
-    ]
-
-    var cont = 0
-
-    function gif(){
-        
-        if ( cont < 3){
-            document.getElementById("gif2").src=fotos[cont]
-        }
-        else{
-            document.getElementById("gif2").src=fotos[cont]
-            cont = cont - 4
-        }
-        cont++
-    }
-
-    function tiempo(){
-        setInterval(gif, 2500)
-    }
-    window.onload = tiempo
-    
-</script>

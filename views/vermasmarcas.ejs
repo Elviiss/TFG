@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/header.css">
     <link rel="stylesheet" href="/styles/footer.css">
-    <link rel="stylesheet" href="/styles/vermaszapas.css">
+    <link rel="stylesheet" href="/styles/vermasmarcas.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,18 +17,18 @@
     <%- include('./header.ejs') %>
     
     <div class="body1">
-        <div class="portada">
-            <h1>Nuevos modelos ya disponibles</h1>
-            <div>
-                <img src="https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2016%2F11%2Fasap-bari-vlone-nike-air-force-1-1.jpg?cbr=1&q=90" width="500px" height="400px">
-
-                <img src="https://i.pinimg.com/originals/d4/e8/7b/d4e87bc394cd8f27d36263c4afbc2012.jpg" width="500px" height="400px">
-            </div>
-            <div>
-                <h2>Air Force x Vlone</h2>
-                <h2>Jordan Retro 4 x KAWS</h2>
-            </div>
-        </div>
+        <table>
+            <thead class="portada">
+                    <% if (marcaprincii) { %>
+                        <% for (var i = 0; i < 1; i++){ %>
+                            <tr class="fotosmarca"> 
+                                <td><img src=<%= marcaprincii[i].foto2 %> width="400px" height="400px"><td>  
+                                <td><img src=<%= marcaprincii[i].foto3 %> width="400px" height="400px"></td>  
+                            </tr>
+                        <% } %>
+                    <% } %>
+            </thead>
+        </table>
         <div class="modelos">
             <div class="titulo">
                 <h1>Modelos más populares</h1>
