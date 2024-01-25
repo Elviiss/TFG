@@ -31,15 +31,35 @@
   flex-direction: row;
   justify-content: space-between;
 }
-.cuerpo .body1 .popu .marcapopu img {
+.cuerpo .body1 .popu .marcapopu .fotos {
+  position: relative;
+}
+.cuerpo .body1 .popu .marcapopu .fotos img {
   width: 250px;
   height: 180px;
   margin: 20px;
 }
-.cuerpo .body1 .popu .marcapopu img:hover {
-  transition: 0.3s;
-  cursor: pointer;
-  opacity: 0.5;
+.cuerpo .body1 .popu .marcapopu .fotos .foto2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+  opacity: 0;
+}
+.cuerpo .body1 .popu .marcapopu .fotos .foto2 h1 {
+  position: absolute;
+  bottom: 25px;
+  left: 20px;
+  text-align: center;
+  width: 250px;
+  background: black;
+  color: white;
+}
+.cuerpo .body1 .popu .marcapopu .fotos:hover .foto1 {
+  opacity: 0;
+}
+.cuerpo .body1 .popu .marcapopu .fotos:hover .foto2 {
+  opacity: 1;
 }
 .cuerpo .body1 .modelos, .cuerpo .body1 .popu {
   display: flex;
