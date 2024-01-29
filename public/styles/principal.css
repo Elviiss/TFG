@@ -54,6 +54,7 @@
   width: 250px;
   background: black;
   color: white;
+  opacity: 0.7;
 }
 .cuerpo .body1 .popu .marcapopu .fotos:hover .foto1 {
   opacity: 0;

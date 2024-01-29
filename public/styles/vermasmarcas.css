@@ -34,8 +34,23 @@ body .body1 .portada .fotosmarca {
   justify-content: space-evenly;
   margin-top: 70px;
 }
+body .body1 .portada .fotosmarca .foto5 {
+  position: absolute !important;
+  left: 30%;
+  top: 5%;
+  box-shadow: -20px -15px 20px white;
+}
+body .body1 .portada .fotosmarca .foto5:hover {
+  z-index: 1;
+}
+body .body1 .portada .fotosmarca .foto6 {
+  position: absolute !important;
+  left: 45%;
+  top: 18%;
+  box-shadow: 20px 15px 20px white;
+}
 body .body1 .portada .fotosmarca img {
-  box-shadow: 5px 5px 15px;
+  box-shadow: 15px 20px 15px black;
 }
 body .body1 .modelos {
   display: flex;
