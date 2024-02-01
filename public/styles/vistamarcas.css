@@ -37,7 +37,7 @@
   justify-content: space-around;
 }
 .body1 .portada div img {
-  box-shadow: 5px 5px 15px;
+  box-shadow: 0px 15px 65px white;
 }
 .body1 .popu {
   display: flex;
