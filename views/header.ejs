@@ -33,9 +33,11 @@
                             <a href="#popup2">Registrarme</a>
                         </div>
                         <div class="contenido">
-                            <input type="text" placeholder="Nombre de usuario">
-                            <input type="password" placeholder="Contraseña">
-                            <a class="btn" href="#"><button>Acceder</button></a>
+                            <form action="login" method="POST">
+                                <input type="text" name="username" placeholder="Nombre de usuario">
+                                <input type="password" name="contraseña" placeholder="Contraseña">
+                                <a class="btn" type="submit"><button>Acceder</button></a>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -59,7 +61,7 @@
                                 <input type="text" name="username" placeholder="Nombre de usuario">
                                 <input type="password" name="contraseña" placeholder="Contraseña">
                                 
-                                <a class="btn-save" type="submit" value="Save"><button>Registrarme</button></a>
+                                <a class="btn" type="submit" value="Save"><button>Registrarme</button></a>
                             </form>
                         </div>
                     </div>

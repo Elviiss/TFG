@@ -40,4 +40,19 @@ mainrouter.post("/register", async (req,res) => {
     res.redirect("/")
 } )
 
+mainrouter.post("/login", async (req,res) => { 
+    const { username, contraseña} = req.body;
+    console.log(req.body.username)
+
+    const [logueo] = await pool.execute('SELECT * FROM usuarios WHERE username = ? AND contraseña = ?', [username, contraseña])
+
+    if(logueo.length > 0){
+        res.redirect("/");
+        console.log("estas logueado")
+    }else{
+        res.render(main)
+        console.log("todo mal")
+    }
+} )
+
 module.exports = mainrouter
