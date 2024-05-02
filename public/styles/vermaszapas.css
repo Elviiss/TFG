@@ -97,6 +97,7 @@ body .body1 .modelos .modelopopu .producto1 {
 body .body1 .modelos .modelopopu .producto1:hover {
   transition: 0.5s;
   box-shadow: 7px 7px 9px black;
+  background: rgba(0, 0, 4, 0);
 }
 body .body1 .modelos .modelopopu .producto1 .modelo {
   font-size: 18px;
