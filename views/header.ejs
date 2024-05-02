@@ -54,11 +54,13 @@
                             <a>Registrarme</a>
                         </div>
                         <div class="contenido">
-                            <input type="email" placeholder="Introduce tu correo electrónico">
-                            <input type="text" placeholder="Nombre de usuario">
-                            <input type="password" placeholder="Contraseña">
-                            <input type="password" placeholder="Confirmar Contraseña">
-                            <a class="btn" href="#"><button>Registrarme</button></a>
+                            <form action="register" method="POST">
+                                <input type="email" name="gmail" placeholder="Introduce tu correo electrónico">
+                                <input type="text" name="username" placeholder="Nombre de usuario">
+                                <input type="password" name="contraseña" placeholder="Contraseña">
+                                
+                                <a class="btn-save" type="submit" value="Save"><button>Registrarme</button></a>
+                            </form>
                         </div>
                     </div>
                 </div>

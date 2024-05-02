@@ -32,4 +32,12 @@ mainrouter.get("/vistamarcas", async (req,res) => {
 } )
 
 
+mainrouter.post("/register", async (req,res) => { 
+    const { username, gmail, contraseña} = req.body;
+    console.log(req.body.username)
+
+    const [result] = await pool.execute(' INSERT INTO usuarios (username, gmail, contraseña) VALUES (?, ?, ?)', [username, gmail, contraseña])
+    res.redirect("/")
+} )
+
 module.exports = mainrouter
