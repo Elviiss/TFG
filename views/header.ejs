@@ -17,60 +17,69 @@
                 <img src="/sources/logofinal2.png">
             </div>
         </div>
-    
-        <div class="boton1">
-            <a class="btn" href="#popup1"><button>Iniciar sesión</button></a>
-            <div id="popup1" class="caja-popup">
-                <div class="popup">
-                    <div class="foto6">
-                        <img src="https://wallpaper-house.com/data/out/12/wallpaper2you_487130.jpg">
-                    </div>
-                    <div class="datos">
-                        <img src="/sources/logofinal2.png">
-                        <a href="#" class="cerrar">&times;</a>
-                        <div class="linea">
-                            <a>Iniciar sesión</a>
-                            <a href="#popup2">Registrarme</a>
-                        </div>
-                        <div class="contenido">
-                            <form action="login" method="POST">
-                                <input type="text" name="username" placeholder="Nombre de usuario">
-                                <input type="password" name="contraseña" placeholder="Contraseña">
-                                <a class="btn" type="submit"><button>Acceder</button></a>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-            <div id="popup2" class="caja-popup">
-                <div class="popup">
-                    <div class="foto6">
-                        <img src="https://wallpapercave.com/wp/wp5866377.jpg">
-                    </div>
-                    <div class="datos">
-                        <img src="/sources/logofinal2.png">
-                        <a href="#" class="cerrar">&times;</a>
-                        <div class="linea">
-                            <a href="#popup1">Iniciar sesión</a>
-                            <a>Registrarme</a>
+
+        <% if (login) { %>
+            <h1 class="saludo">Bienvenido, <%= username %></h1>
+            <a href="logout" class="out"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+        <% } else { %>
+            <div class="boton1">
+                <a class="btn" href="#popup1"><button>Iniciar sesión</button></a>
+                <div id="popup1" class="caja-popup">
+                    <div class="popup">
+                        <div class="foto6">
+                            <img src="https://wallpaper-house.com/data/out/12/wallpaper2you_487130.jpg">
                         </div>
-                        <div class="contenido">
-                            <form action="register" method="POST">
-                                <input type="email" name="gmail" placeholder="Introduce tu correo electrónico">
-                                <input type="text" name="username" placeholder="Nombre de usuario">
-                                <input type="password" name="contraseña" placeholder="Contraseña">
-                                
-                                <a class="btn" type="submit" value="Save"><button>Registrarme</button></a>
-                            </form>
+                        <div class="datos">
+                            <img src="/sources/logofinal2.png">
+                            <a href="#" class="cerrar">&times;</a>
+                            <div class="linea">
+                                <a>Iniciar sesión</a>
+                                <a href="#popup2">Registrarme</a>
+                            </div>
+                            <div class="contenido">
+                                <form action="/login" method="POST">
+                                    <input type="text" name="username" placeholder="Nombre de usuario" required>
+                                    <input type="password" name="contraseña" placeholder="Contraseña" required>
+                                    <a class="btn" type="submit"><button>Acceder</button></a>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
+    
+                <div id="popup2" class="caja-popup">
+                    <div class="popup">
+                        <div class="foto6">
+                            <img src="https://wallpapercave.com/wp/wp5866377.jpg">
+                        </div>
+                        <div class="datos">
+                            <img src="/sources/logofinal2.png">
+                            <a href="#" class="cerrar">&times;</a>
+                            <div class="linea">
+                                <a href="#popup1">Iniciar sesión</a>
+                                <a>Registrarme</a>
+                            </div>
+                            <div class="contenido">
+                                <form action="register" method="POST">
+                                    <input type="email" name="gmail" placeholder="Introduce tu correo electrónico" required>
+                                    <input type="text" name="username" placeholder="Nombre de usuario" required>
+                                    <input type="password" name="contraseña" placeholder="Contraseña" required>
+                                    
+                                    <a class="btn" type="submit" value="Save"><button>Registrarme</button></a>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="buscar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
             </div>
-            <div class="buscar">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </div>
-        </div>
+        <% } %> 
+
+
+        
     </header>
 
 </div>

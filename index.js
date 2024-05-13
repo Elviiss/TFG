@@ -23,6 +23,12 @@ api.use(express.json())
 
 api.use(logger("dev"))
 
+const session = require('express-session');
+api.use(session({
+    secret:'secret',
+    resave: true,
+    saveUninitialized: true
+}))
 
 api.use("/",mainrouter)
 

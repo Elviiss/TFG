@@ -38,6 +38,12 @@
 .color-negro .logotipo .logo {
   opacity: 0 !important;
 }
+.color-negro .saludo {
+  color: black !important;
+}
+.color-negro .out i {
+  color: black !important;
+}
 
 .header, .color-negro {
   background: none;
@@ -78,6 +84,14 @@
   height: 60px;
   border-radius: 20%;
   margin-top: 12px;
+}
+.header .saludo, .color-negro .saludo {
+  border: none;
+  color: white;
+}
+.header .out i, .color-negro .out i {
+  color: white;
+  font-size: 30px;
 }
 .header nav .links, .color-negro nav .links {
   border: none;
