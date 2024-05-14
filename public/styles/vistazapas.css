@@ -105,7 +105,14 @@
   transform: rotate(180deg);
   transition: 0.5s;
 }
-.vistasneakers .compra .informacion .info #botoncomprar {
+.vistasneakers .compra .informacion .info .popup3 {
+  display: flex;
+  flex-direction: row;
+  width: 20%;
+  height: 50%;
+  border: none;
+}
+.vistasneakers .compra .informacion .info .popup3 #botoncomprar {
   font-weight: 1000;
   color: white;
   padding: 9px;
@@ -117,12 +124,55 @@
   align-items: center;
   margin-left: 80px;
 }
-.vistasneakers .compra .informacion .info #botoncomprar:hover {
+.vistasneakers .compra .informacion .info .popup3 #botoncomprar:hover {
   transition: 0.5s;
   background: whitesmoke;
   color: black;
   border: 2px solid white;
   box-shadow: 2px 2px 5px black;
+}
+.vistasneakers .compra .informacion .info .popup3 .cajon-popup {
+  position: fixed;
+  z-index: 1 !important;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 0.3s;
+  visibility: hidden;
+  opacity: 0;
+  border: none;
+}
+.vistasneakers .compra .informacion .info .popup3 .cajon-popup:target {
+  visibility: visible;
+  opacity: 1;
+}
+.vistasneakers .compra .informacion .info .popup3 .cajon-popup .popup6 {
+  background: white;
+  color: black;
+  border-radius: 5px;
+  width: 50%;
+  height: 75%;
+  position: relative;
+  z-index: 1 !important;
+  left: 25%;
+  top: 15%;
+  border: 2px solid red;
+  display: flex;
+  flex-direction: row;
+}
+.vistasneakers .compra .informacion .info .popup3 .cajon-popup .popup6 .cerrar {
+  position: absolute;
+  top: 12px;
+  right: 20px;
+  transition: 0.3s;
+  font-size: 30px;
+  font-weight: bold;
+  color: #333;
+}
+.vistasneakers .compra .informacion .info .popup3 .cajon-popup .popup6 .cerrar:hover {
+  color: tomato;
 }
 
 .gif4 {
