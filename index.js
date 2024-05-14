@@ -3,8 +3,10 @@ const path = require("path")
 const logger = require("morgan")
 const mainrouter = require("./routes/mainrouter.js")
 const myconecction = require('express-myconnection')
+require('dotenv').config()
 
 const port = process.env.PORT ?? 3000
+
 
 const api = express()
 

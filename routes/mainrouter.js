@@ -1,6 +1,32 @@
 const {Router} = require("express")
 const pool = require ('../database.js')
 const mainrouter = Router()
+const Stripe = require("stripe")
+const { STRIPE_PRIVATE_KEY} = require('../keys.js')
+
+const stripe = new Stripe(STRIPE_PRIVATE_KEY)
+
+mainrouter.post("/checkout-session", async (req,res) => { 
+    const session2 = await stripe.checkout.sessions.create({
+        line_items: [
+            {
+                price_data:{
+                    product_data:{
+                        name: 'Air Force',
+                        description: 'Zapatillas'
+                    },
+                    currency: 'usd',
+                    unit_amount: 20000
+                },
+                quantity:1
+            }
+        ],
+        mode: 'payment',
+        success_url: 'http://localhost:4444/'
+    })
+    console.log(session2)
+    return res.json(session2)
+} )
 
 
 mainrouter.get("/", async (req,res) => {
