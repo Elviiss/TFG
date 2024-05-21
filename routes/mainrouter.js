@@ -6,13 +6,15 @@ const { STRIPE_PRIVATE_KEY} = require('../keys.js')
 
 const stripe = new Stripe(STRIPE_PRIVATE_KEY)
 
-mainrouter.post("/checkout-session", async (req,res) => { 
+mainrouter.post("/vistazapas/checkout-session", async (req,res) => { 
+    const [zapasss] = await pool.query('SELECT * from zapa where id = ?', [req.params.id])
+    const nombre = req.body.zapa
     const session2 = await stripe.checkout.sessions.create({
         line_items: [
             {
                 price_data:{
                     product_data:{
-                        name: 'Air Force',
+                        name: nombre,
                         description: 'Zapatillas'
                     },
                     currency: 'usd',
@@ -25,6 +27,7 @@ mainrouter.post("/checkout-session", async (req,res) => {
         success_url: 'http://localhost:4444/'
     })
     console.log(session2)
+    console.log(nombre)
     return res.json(session2)
 } )
 
