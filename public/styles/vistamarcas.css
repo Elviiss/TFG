@@ -28,9 +28,6 @@
   text-align: center;
   font-family: "Bungee", sans-serif;
 }
-.body1 .portada h2 {
-  margin-top: 10px;
-}
 .body1 .portada div {
   display: flex;
   flex-direction: row;
@@ -92,4 +89,39 @@
   justify-content: space-between;
   border: none;
   width: 95%;
+}
+
+@media screen and (max-width: 700px) {
+  .body1 .portada {
+    height: 300px;
+  }
+  .body1 .portada h1 {
+    font-size: 15px;
+  }
+  .body1 .portada div {
+    flex-direction: column;
+  }
+  .body1 .portada div img {
+    margin-top: 10px;
+    width: 200px;
+    height: 100px;
+    margin-left: 80px;
+  }
+  .body1 .popu {
+    margin-top: 120px;
+  }
+  .body1 .popu .marcapopu {
+    width: 70%;
+    margin-left: 70px;
+  }
+  .body1 .popu .marcapopu .fotos img {
+    width: 200px;
+    height: 150px;
+    margin: 10px;
+  }
+  .body1 .popu .marcapopu .fotos .foto2 h1 {
+    left: 10px;
+    width: 200px;
+    bottom: 15px;
+  }
 }/*# sourceMappingURL=vistamarcas.css.map */

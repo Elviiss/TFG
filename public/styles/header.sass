@@ -16,8 +16,6 @@
     width: 100%
     nav .links li a
         color: black
-    .buscar i
-        color: black
     .boton1 button
         color: black !important
         &:hover
@@ -70,38 +68,35 @@
                 height: 60px
                 border-radius: 20%
                 margin-top: 12px
-    .saludo
-        border: none
-        color: white
     .out
         i
             color: white
             font-size: 30px
-    nav .links
+    nav 
+        input:checked  ~ ul
+            display: block
+        input
+            display: none
+        label 
+            display: none
+        .links
+            border: none
+            list-style: none
+            display: flex       
+            width: 100%
+            li
+                display: flex
+                flex-direction: row
+                padding: 0 10px
+            a
+                font-size: 20px
+                text-decoration: none
+                color: white
+    .saludo
         border: none
-        list-style: none
-        display: flex       
-        width: 100%
-        li
-            display: flex
-            flex-direction: row
-            padding: 0 10px
-        a
-            font-size: 20px
-            text-decoration: none
-            color: white
-    .buscar
-        display: flex
-        justify-content: center
-        align-items: center
-        text-align: center
-        border: none
-        width: 10%
-        height: 100%
-        margin-left: 20px
-        i
-            font-size: 25px
-            cursor: pointer
+        color: white
+        .out
+            margin-left: 20px
     .boton1 
         display: flex
         flex-direction: row
@@ -221,3 +216,50 @@
                                 color: black !important
                                 border: 2px solid white !important
                                 box-shadow: 2px 2px 5px black
+            
+
+
+
+@media screen and (max-width: 700px)
+    .color-negro
+        display: none
+    .paginanav
+        width: 100% !important
+        border: none
+        .header
+            width: 100%
+            border: none
+            nav
+                input:checked  ~ .links
+                    display: block
+                input
+                    display: none 
+                label 
+                    box-sizing: border-box
+                    display: inline-block 
+                    border-radius: 5px
+                    width: 30px
+                    height: 30px
+                    line-height: 30px
+                    font-weight: bold
+                    text-align: center
+                    user-select: none
+                .links
+                    display: none 
+                    background: white
+                    box-shadow: 5px 5px 20px white
+                    li
+                        display: block 
+                        a
+                            font-size: 20px
+                            text-decoration: none
+                            color: black
+            .logotipo
+                border: none
+                width: 20%
+            .boton1
+                border: none
+                width: 20%
+                button
+                    margin-left: 0px
+                    padding: 5px

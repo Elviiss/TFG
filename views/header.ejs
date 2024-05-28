@@ -1,6 +1,8 @@
 <div class="paginanav">
     <header class="header">   
         <nav>
+            <input type="checkbox" id="menu">
+            <label for="menu"> ☰</label>
             <ul class="links">
                 <li><a href="/">Inicio</a></li> 
                 <li><a href="">Novedades</a></li>  
@@ -19,8 +21,7 @@
 
 
         <% if (login) { %>
-            <h1 class="saludo">Bienvenido, <%= username %></h1>
-            <a href="logout" class="out"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+            <h1 class="saludo">Bienvenido, <%= username %> <a href="/logout" class="out"><i class="fa-solid fa-arrow-right-from-bracket"></i></a></h1>
         <% } else { %>
             <div class="boton1">
                 <a class="btn" href="#popup1"><button>Iniciar sesión</button></a>
@@ -60,12 +61,13 @@
                                 <a>Registrarme</a>
                             </div>
                             <div class="contenido">
-                                <form action="register" method="POST">
+                                <form id="registerForm" action="/register" method="POST">
                                     <input type="email" name="gmail" placeholder="Introduce tu correo electrónico" required>
                                     <input type="text" name="username" placeholder="Nombre de usuario" required>
                                     <input type="password" name="contraseña" placeholder="Contraseña" required>
                                     
-                                    <a class="btn" type="submit" value="Save"><button>Registrarme</button></a>
+                                    <a class="btn" type="submit"><button>Registrarme</button></a>
+
                                 </form>
                             </div>
                         </div>
@@ -80,7 +82,6 @@
     </header>
 
 </div>
-
 
 <script>
     class Color {
@@ -101,4 +102,49 @@
     let bajar = window.scrollY
     const color = new Color(barra, bajar)
     color.cambiaColor()
+
+
+
+
+
+
+    document.getElementById('registerForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const formData = new FormData(this);
+    const data = Object.fromEntries(formData.entries());
+
+    fetch('/register', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    })
+    .then(response => response.json())
+    .then(result => {
+      if (result.redirect === "/logout") {
+        Swal.fire({
+          icon: 'warning',
+          title: 'Datos incorrectos',
+          text: result.message,
+          showConfirmButton: false,
+          timer: 2000
+        }).then(() => {
+          window.location.href = result.redirect;
+        });
+      } else {
+        Swal.fire({
+          icon: 'success',
+          title: 'Datos correctos',
+          text: result.message,
+          showConfirmButton: false,
+          timer: 2000
+        }).then(() => {
+          window.location.href = result.redirect;
+        });
+      }
+    })
+  });
 </script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

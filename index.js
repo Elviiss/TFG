@@ -4,11 +4,14 @@ const logger = require("morgan")
 const mainrouter = require("./routes/mainrouter.js")
 const myconecction = require('express-myconnection')
 require('dotenv').config()
+const bodyParser = require('body-parser')
 
 const port = process.env.PORT ?? 3000
 
 
 const api = express()
+
+api.use(bodyParser.json())
 
 //basic configurations
 api.set("views",path.join(__dirname,"views"))

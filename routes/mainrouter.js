@@ -3,6 +3,7 @@ const pool = require ('../database.js')
 const mainrouter = Router()
 const Stripe = require("stripe")
 const { STRIPE_PRIVATE_KEY} = require('../keys.js')
+const Swal = require('sweetalert2')
 
 const stripe = new Stripe(STRIPE_PRIVATE_KEY)
 
@@ -35,6 +36,7 @@ mainrouter.post("/vistazapas/checkout-session", async (req,res) => {
 mainrouter.get("/", async (req,res) => {
     const [zapass] = await pool.query('SELECT * FROM zapa')
     const [marcaprincii] = await pool.query('SELECT * FROM marcaprinci')
+
 
     if(req.session.loggedin){
         res.render("main", {zapass,marcaprincii,
@@ -130,8 +132,22 @@ mainrouter.post("/register", async (req,res) => {
     const { username, gmail, contraseña} = req.body;
     console.log(req.body.username)
 
-    const [result] = await pool.execute(' INSERT INTO usuarios (username, gmail, contraseña) VALUES (?, ?, ?)', [username, gmail, contraseña])
-    res.redirect("/")
+    const data = req.body
+    const check = await pool.query('SELECT * FROM usuarios WHERE username = ?',[username])
+    const check2 = await pool.query('SELECT * FROM usuarios WHERE gmail = ?',[gmail])
+
+
+    if(check[0].length > 0){
+        return res.status(400).json({ message: 'Usuario ya existente', redirect: '/logout' });
+    }else{
+        if(check2[0].length > 0){
+            return res.status(400).json({ message: 'Correo ya existente', redirect: '/logout' });
+        }else{
+            const [result] = await pool.execute(' INSERT INTO usuarios (username, gmail, contraseña) VALUES (?, ?, ?)', [username, gmail, contraseña])
+
+            return res.status(200).json({ message: 'Usuario registrado correctamente', redirect: '/' });
+        }
+    }
 } )
 
 mainrouter.post("/login", async (req,res) => { 
@@ -171,8 +187,21 @@ mainrouter.post("/login", async (req,res) => {
 
 mainrouter.get('/logout', (req, res) => {
     req.session.destroy(() => {
-        res.redirect('/')
+        res.redirect("/")
     })
+})
+mainrouter.post('/vistazapas/logout', (req, res) => {
+    res.redirect("/")
+    
+})
+mainrouter.post('/vermasmarcas/logout', (req, res) => {
+    res.redirect("/")
+    
+})
+
+
+mainrouter.get('*', (req, res) => {
+    res.render('404.ejs')
 })
 
 module.exports = mainrouter

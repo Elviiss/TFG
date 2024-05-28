@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -59,10 +59,10 @@
                                     <div id="popup4" class="cajon-popup">
                                         <div class="popup6">
                                             <h1>hola</h1>
-                                            <form action="checkout-session" method="POST">
+                                            <form id="checkout" action="checkout-session" method="POST">
                                                 <input name="rico" type="hidden">
                                                 <input type="hidden" name="zapa" value="<%= zapasss[i].modelo %>">
-                                                <button id="checkout" type="submit" value="save">Pagar</button>
+                                                <a class="btn" type="submit" value="save"><button>Pagar</button></a>
                                             </form>
                                             
                                             <a href="#" class="cerrar">&times;</a>

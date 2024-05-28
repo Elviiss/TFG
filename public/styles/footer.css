@@ -84,4 +84,63 @@ footer .abajo .logoo {
   display: flex;
   justify-content: center;
   margin-left: 280px;
+}
+
+@media screen and (max-width: 700px) {
+  footer {
+    width: 100%;
+  }
+  footer .arriba {
+    border: none;
+    height: 100px;
+    margin-top: 5px !important;
+  }
+  footer .arriba .atencion .iconos, footer .arriba .ayuda .iconos, footer .arriba .metodos .iconos {
+    text-align: center;
+  }
+  footer .arriba .atencion .iconos i, footer .arriba .ayuda .iconos i, footer .arriba .metodos .iconos i {
+    font-size: 15px;
+    margin: 10px;
+  }
+  footer .arriba .atencion h1, footer .arriba .ayuda h1, footer .arriba .metodos h1 {
+    font-size: 10px;
+  }
+  footer .arriba .atencion a, footer .arriba .ayuda a, footer .arriba .metodos a {
+    margin-left: 30px;
+    margin-top: 10px;
+    font-size: 10px;
+  }
+  footer .medio {
+    height: 100px;
+  }
+  footer .medio .acerca .iconos, footer .medio .aviso .iconos, footer .medio .redes .iconos {
+    text-align: center;
+  }
+  footer .medio .acerca .iconos i, footer .medio .aviso .iconos i, footer .medio .redes .iconos i {
+    font-size: 15px;
+    margin: 10px;
+  }
+  footer .medio .acerca h1, footer .medio .aviso h1, footer .medio .redes h1 {
+    font-size: 10px;
+  }
+  footer .medio .acerca a, footer .medio .aviso a, footer .medio .redes a {
+    margin-left: 30px;
+    margin-top: 10px;
+    font-size: 10px;
+  }
+  footer .abajo {
+    border: none;
+  }
+  footer .abajo .copy {
+    border: none;
+    margin: 0;
+  }
+  footer .abajo .copy p {
+    font-size: 8px;
+    width: 100px;
+  }
+  footer .abajo .logoo {
+    border: none;
+    margin-left: 30px;
+  }
 }/*# sourceMappingURL=footer.css.map */

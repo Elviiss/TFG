@@ -197,4 +197,55 @@
   height: 480px;
   opacity: 1;
   border: none;
+}
+
+@media screen and (max-width: 700px) {
+  .cuerpo {
+    width: 100%;
+    background-image: url("https://img.freepik.com/fotos-premium/fondo-textura-cartel-papel-arrugado-arrugado-blanco-blanco_293060-4178.jpg");
+    background-size: 400px;
+  }
+  .cuerpo .body1 {
+    width: 100%;
+    height: 2500px;
+    border: none;
+    margin-top: 10px;
+  }
+  .cuerpo .body1 .popu {
+    width: 100%;
+    height: 800px;
+    border: none;
+    margin-bottom: 50px;
+  }
+  .cuerpo .body1 .popu .marcapopu {
+    flex-direction: column;
+  }
+  .cuerpo .body1 .popu .marcapopu .fotos img {
+    width: 200px;
+    height: 150px;
+    margin: 10px;
+  }
+  .cuerpo .body1 .popu .marcapopu .titulo {
+    width: 90%;
+    border: none;
+  }
+  .cuerpo .body1 .modelos {
+    width: 100%;
+    height: 1500px;
+    border: none;
+  }
+  .cuerpo .body1 .modelos .modelopopu {
+    flex-direction: column;
+  }
+  .cuerpo .body1 .modelos .titulo {
+    width: 90%;
+    border: none;
+  }
+  .gif1 {
+    left: 30px;
+  }
+  .gif1 img {
+    width: 300px;
+    height: 150px;
+  }
 }/*# sourceMappingURL=principal.css.map */

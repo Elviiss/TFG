@@ -21,9 +21,6 @@
 .color-negro nav .links li a {
   color: black;
 }
-.color-negro .buscar i {
-  color: black;
-}
 .color-negro .boton1 button {
   color: black !important;
 }
@@ -85,13 +82,18 @@
   border-radius: 20%;
   margin-top: 12px;
 }
-.header .saludo, .color-negro .saludo {
-  border: none;
-  color: white;
-}
 .header .out i, .color-negro .out i {
   color: white;
   font-size: 30px;
+}
+.header nav input:checked ~ ul, .color-negro nav input:checked ~ ul {
+  display: block;
+}
+.header nav input, .color-negro nav input {
+  display: none;
+}
+.header nav label, .color-negro nav label {
+  display: none;
 }
 .header nav .links, .color-negro nav .links {
   border: none;
@@ -109,19 +111,12 @@
   text-decoration: none;
   color: white;
 }
-.header .buscar, .color-negro .buscar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+.header .saludo, .color-negro .saludo {
   border: none;
-  width: 10%;
-  height: 100%;
-  margin-left: 20px;
+  color: white;
 }
-.header .buscar i, .color-negro .buscar i {
-  font-size: 25px;
-  cursor: pointer;
+.header .saludo .out, .color-negro .saludo .out {
+  margin-left: 20px;
 }
 .header .boton1, .color-negro .boton1 {
   display: flex;
@@ -261,4 +256,62 @@
   color: black !important;
   border: 2px solid white !important;
   box-shadow: 2px 2px 5px black;
+}
+
+@media screen and (max-width: 700px) {
+  .color-negro {
+    display: none;
+  }
+  .paginanav {
+    width: 100% !important;
+    border: none;
+  }
+  .paginanav .header {
+    width: 100%;
+    border: none;
+  }
+  .paginanav .header nav input:checked ~ .links {
+    display: block;
+  }
+  .paginanav .header nav input {
+    display: none;
+  }
+  .paginanav .header nav label {
+    box-sizing: border-box;
+    display: inline-block;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-weight: bold;
+    text-align: center;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
+  }
+  .paginanav .header nav .links {
+    display: none;
+    background: white;
+    box-shadow: 5px 5px 20px white;
+  }
+  .paginanav .header nav .links li {
+    display: block;
+  }
+  .paginanav .header nav .links li a {
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+  }
+  .paginanav .header .logotipo {
+    border: none;
+    width: 20%;
+  }
+  .paginanav .header .boton1 {
+    border: none;
+    width: 20%;
+  }
+  .paginanav .header .boton1 button {
+    margin-left: 0px;
+    padding: 5px;
+  }
 }/*# sourceMappingURL=header.css.map */
