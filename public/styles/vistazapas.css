@@ -48,6 +48,16 @@
   align-items: center;
   justify-content: space-around;
 }
+.vistasneakers .compra .informacion .info p {
+  color: white;
+}
+.vistasneakers .compra .informacion .info #_descripcion {
+  display: none;
+  font-size: 10px;
+}
+.vistasneakers .compra .informacion .info #_precio {
+  display: none;
+}
 .vistasneakers .compra .informacion .info .modelo {
   font-size: 30px;
   font-weight: 900;
@@ -63,48 +73,6 @@
   border: none;
   width: 80%;
 }
-.vistasneakers .compra .informacion .info .selectalla {
-  border-top: 1px solid;
-  border-bottom: 1px solid;
-  display: inline-block;
-  position: relative;
-  text-align: center;
-  width: 80%;
-  margin: 20px;
-}
-.vistasneakers .compra .informacion .info .selectalla button {
-  background: none;
-  border: none;
-  margin-right: 5%;
-  font-size: 20px;
-}
-.vistasneakers .compra .informacion .info .selectalla .opciontalla {
-  display: none;
-  position: absolute;
-  width: 100%;
-  height: 220px;
-  overflow: auto;
-  background: whitesmoke;
-  box-shadow: 0 10px 10px 0px rgba(0, 0, 0, 0.4);
-}
-.vistasneakers .compra .informacion .info .selectalla .opciontalla p {
-  display: block;
-  color: #000000;
-  padding: 5px;
-  text-decoration: none;
-}
-.vistasneakers .compra .informacion .info .selectalla .opciontalla p:hover {
-  cursor: pointer;
-  color: #FFFFFF;
-  background-color: black;
-}
-.vistasneakers .compra .informacion .info .selectalla:hover .opciontalla {
-  display: block;
-}
-.vistasneakers .compra .informacion .info .selectalla:hover i {
-  transform: rotate(180deg);
-  transition: 0.5s;
-}
 .vistasneakers .compra .informacion .info .popup3 {
   display: flex;
   flex-direction: row;
@@ -119,6 +87,7 @@
   padding-left: 16px;
   padding-right: 16px;
   width: 100px;
+  height: 25px;
   background: black;
   border: 2px solid black;
   border-radius: 5px;
@@ -155,15 +124,17 @@
   background: white;
   color: black;
   border-radius: 5px;
-  width: 50%;
-  height: 75%;
+  width: 30%;
+  height: 45%;
   position: relative;
   z-index: 1 !important;
-  left: 25%;
+  left: 35%;
   top: 15%;
-  border: 2px solid red;
+  border: none;
+  box-shadow: 8px 8px 16px white;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
 }
 .vistasneakers .compra .informacion .info .popup3 .cajon-popup .popup6 .cerrar {
   position: absolute;
@@ -176,6 +147,53 @@
 }
 .vistasneakers .compra .informacion .info .popup3 .cajon-popup .popup6 .cerrar:hover {
   color: tomato;
+}
+.vistasneakers .compra .informacion .info .popup3 .cajon-popup .popup6 h1 {
+  border: none;
+  margin-top: 40px;
+}
+.vistasneakers .compra .informacion .info .popup3 .cajon-popup .popup6 .recibo {
+  border: none;
+  width: 70%;
+  height: 70%;
+}
+.vistasneakers .compra .informacion .info .popup3 .cajon-popup .popup6 .recibo form #_talla {
+  background: white;
+  color: black;
+  border: 1px solid grey;
+  border-radius: 3px;
+  width: 120px;
+}
+.vistasneakers .compra .informacion .info .popup3 .cajon-popup .popup6 .recibo form button {
+  background: black;
+  color: white;
+  width: 60px;
+  height: 18px;
+  border: none;
+  border-radius: 5px;
+}
+.vistasneakers .compra .informacion .info .popup3 .cajon-popup .popup6 .recibo a button {
+  font-weight: 1000;
+  color: white;
+  padding: 9px;
+  padding-left: 16px;
+  padding-right: 16px;
+  width: 100px;
+  background: black;
+  border: 2px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  align-items: center;
+  margin-left: 80px;
+  margin-top: 40px;
+  text-decoration: none;
+}
+.vistasneakers .compra .informacion .info .popup3 .cajon-popup .popup6 .recibo a button:hover {
+  transition: 0.5s;
+  background: whitesmoke;
+  color: black;
+  border: 2px solid white;
+  box-shadow: 2px 2px 5px black;
 }
 
 .gif4 {
@@ -195,4 +213,46 @@
 body {
   background-image: url("https://img.freepik.com/fotos-premium/fondo-textura-cartel-papel-arrugado-arrugado-blanco-blanco_293060-4178.jpg");
   background-size: 100%;
+}
+
+@media screen and (max-width: 700px) {
+  .vistasneakers .gif4 {
+    top: 100px;
+    left: 1px;
+  }
+  .vistasneakers .gif4 img {
+    width: 350px;
+    height: 175px;
+  }
+  .vistasneakers .compra {
+    margin-top: 5px;
+    height: 800px;
+  }
+  .vistasneakers .compra .informacion {
+    border: none;
+    height: 800px;
+  }
+  .vistasneakers .compra .informacion .info2 {
+    display: none;
+  }
+  .vistasneakers .compra .informacion .info {
+    border: none;
+    width: 100%;
+    height: 800px;
+  }
+  .vistasneakers .compra .informacion .info .modelo {
+    border: none;
+    width: 300px;
+  }
+  .vistasneakers .compra .informacion .info .texto {
+    border: none;
+    width: 300px;
+  }
+  .vistasneakers .compra .informacion .info .popup3 .cajon-popup .popup6 {
+    width: 80%;
+    left: 10%;
+  }
+  .vistasneakers .compra .informacion .info .popup3 .cajon-popup .popup6 .recibo a button {
+    margin-left: 60px;
+  }
 }/*# sourceMappingURL=vistazapas.css.map */

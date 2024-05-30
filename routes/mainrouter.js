@@ -7,19 +7,17 @@ const Swal = require('sweetalert2')
 
 const stripe = new Stripe(STRIPE_PRIVATE_KEY)
 
-mainrouter.post("/vistazapas/checkout-session", async (req,res) => { 
-    const [zapasss] = await pool.query('SELECT * from zapa where id = ?', [req.params.id])
-    const nombre = req.body.zapa
+mainrouter.post("/checkout-session", async (req,res) => { 
     const session2 = await stripe.checkout.sessions.create({
         line_items: [
             {
                 price_data:{
                     product_data:{
-                        name: nombre,
-                        description: 'Zapatillas'
+                        name: req.query.modelo + '    Talla: '+ req.query.talla,
+                        description: req.query.descripcion
                     },
-                    currency: 'usd',
-                    unit_amount: 20000
+                    currency: 'eur',
+                    unit_amount: req.query.precio * 100
                 },
                 quantity:1
             }
@@ -27,8 +25,7 @@ mainrouter.post("/vistazapas/checkout-session", async (req,res) => {
         mode: 'payment',
         success_url: 'http://localhost:4444/'
     })
-    console.log(session2)
-    console.log(nombre)
+    console.log(req.query)
     return res.json(session2)
 } )
 

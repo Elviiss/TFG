@@ -39,31 +39,25 @@
                                 <td class="modelo"><%= zapasss[i].modelo %></td>
                                 <td class="marca"><%= zapasss[i].marca %></td>
                                 <td class="texto"><%= zapasss[i].descripcion %></td>
-                                <td><div class="selectalla">
-                                    <button>Tallas</button>
-                                    <i class="fa-solid fa-angle-up"></i>
-                                    <div class="opciontalla">
-                                        <p>38</p>
-                                        <p>39</p>
-                                        <p>40</p>
-                                        <p>41</p>
-                                        <p>42</p>
-                                        <p>43</p>
-                                        <p>43</p>
-                                        <p>44</p>
-                                        <p>45</p>
-                                    </div>
-                                </div>
+                                <td>
                                 <div class="popup3">
                                     <a class="btn" type="submit" id="botoncomprar" href="#popup4">Comprar</a>
                                     <div id="popup4" class="cajon-popup">
                                         <div class="popup6">
-                                            <h1>hola</h1>
-                                            <form id="checkout" action="checkout-session" method="POST">
-                                                <input name="rico" type="hidden">
-                                                <input type="hidden" name="zapa" value="<%= zapasss[i].modelo %>">
-                                                <a class="btn" type="submit" value="save"><button>Pagar</button></a>
-                                            </form>
+                                            <h1>Detalles de la compra</h1>
+                                            <div class="recibo">
+                                                <p id="_producto" ><%= zapasss[i].modelo %></p>
+                                                <h1 id="_descripcion" ><%= zapasss[i].descripcion %></h1>
+                                                <h2 id="_precio" ><%= zapasss[i].precio %></h2>
+                                                
+                                                <form>
+                                                    <input type="text" id="_talla" placeholder="Introduzca su talla">
+                                                    <button onclick="capturar()">Buscar</button>
+                                                </form>
+                                                <h3 id="_titu"></h3>
+                                                <h3 id="_talla2"></h3>
+                                                <a class="btn" id="checkout" value="save"><button id="compra" disabled>Pagar</button></a>
+                                            </div>
                                             
                                             <a href="#" class="cerrar">&times;</a>
                                         </div>
@@ -85,9 +79,37 @@
 </body>
 
 <script>
+
+    function capturar(){
+        var h3 =parseInt
+        h3 =document.getElementById('_talla').value
+        console.log(h3)
+        
+        if (h3 > 34 & h3 < 46){
+            document.getElementById('_talla2').innerHTML = h3
+            document.getElementById('_titu').innerHTML = 'Su talla es: '
+            const boo = document.getElementById('compra')
+            boo.disabled = false
+        }else if(h3 < 35 & h3 > 32 || h3 >45 & h3 < 50){
+            document.getElementById('_talla2').innerHTML = 'La talla introducida no esta disponible'
+            document.getElementById('_titu').innerHTML = ''
+            const boo = document.getElementById('compra')
+            boo.disabled = true
+        }else{
+            document.getElementById('_talla2').innerHTML = 'La talla introducida no existe'
+            document.getElementById('_titu').innerHTML = ''
+            const boo = document.getElementById('compra')
+            boo.disabled = true
+        }
+    }
+
     const button = document.getElementById('checkout')
+    const p =document.getElementById('_producto')
+    const h1 =document.getElementById('_descripcion')
+    const h2 =document.getElementById('_precio')
+    const h5 =document.getElementById('_talla2')
     button.addEventListener('click', async () => {
-        const res = await fetch('/checkout-session', {
+        const res = await fetch('/checkout-session?modelo='+p.textContent+'&descripcion='+h1.textContent+'&precio='+h2.textContent+'&talla='+h5.textContent,{
             method: 'POST'
         })
         const data = await res.json()
