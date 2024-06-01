@@ -18,7 +18,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "devstart": "nodemon --env-file .env index.js"
+    "devstart": "nodemon  index.js"
   },
   "author": "",
   "license": "ISC",
