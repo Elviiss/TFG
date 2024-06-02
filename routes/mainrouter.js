@@ -155,7 +155,7 @@ mainrouter.post("/login", async (req,res) => {
     const contraseña = req.body.contraseña
     console.log(req.body.username)
 
-    const [logueo] = await pool.execute('SELECT * FROM usuarios WHERE username = ? AND contraseña = ?', [username, contraseña])
+    const [logueo] = await pool.execute('SELECT * FROM usuarios WHERE username = ?', [username])
 
     if(logueo.length > 0){
 
