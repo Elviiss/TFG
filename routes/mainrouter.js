@@ -174,11 +174,11 @@ mainrouter.post("/login", async (req,res) => {
             })
             console.log("todo mal")
             console.log(req.session.username)
-            
+
         }
     }else{
         res.redirect('/')
-        console.log("todo mal")     
+        console.log("mal")     
     }
 } )
 
