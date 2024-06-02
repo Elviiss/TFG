@@ -158,15 +158,15 @@ mainrouter.post("/login", async (req,res) => {
     const [logueo] = await pool.execute('SELECT * FROM usuarios WHERE username = ? AND contraseña = ?', [username, contraseña])
 
     if(logueo.length > 0){
-        const [zapass] = await pool.query('SELECT * FROM zapa')
-        const [marcaprincii] = await pool.query('SELECT * FROM marcaprinci')
 
         req.session.loggedin = true
         req.session.username = req.body.username
-        if(req.session.loggedin){
+        const user = logueo[0]
+        const match = await bcrypt.compare(contraseña, user.contraseña )
+        if(match){
             return res.status(200).json({ message: 'Usuario registrado correctamente', redirect: '/' });    
         }else{
-            return res.status(400).json({ message: 'Usuario o contraseña incorrectos', redirect: '/logout' });
+            return res.status(400).json({ message: ' incorrectos', redirect: '/logout' });
         }
     }else{
         return res.status(400).json({ message: 'Usuario o contraseña incorrectos', redirect: '/logout' });     
