@@ -2,9 +2,12 @@ const express = require("express")
 const path = require("path")
 const logger = require("morgan")
 const mainrouter = require("./routes/mainrouter.js")
-const myconecction = require('express-myconnection')
+const session = require('express-session');
 require('dotenv').config()
 const bodyParser = require('body-parser')
+const mysqlStore = require('express-mysql-session')(session)
+const connection = require('./database.js')
+
 
 const port = process.env.PORT ?? 3000
 
@@ -28,11 +31,11 @@ api.use(express.json())
 
 api.use(logger("dev"))
 
-const session = require('express-session');
 api.use(session({
     secret:'secret',
-    resave: true,
-    saveUninitialized: true
+    resave: false,
+    saveUninitialized: false,
+    store: new mysqlStore({}, connection)
 }))
 
 api.use("/",mainrouter)
