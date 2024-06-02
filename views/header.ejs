@@ -38,7 +38,7 @@
                                 <a href="#popup2">Registrarme</a>
                             </div>
                             <div class="contenido">
-                                <form action="/login" method="POST">
+                                <form id="registerForm2" action="/login" method="POST">
                                     <input type="text" name="username" placeholder="Nombre de usuario" required>
                                     <input type="password" name="contraseña" placeholder="Contraseña" required>
                                     <a class="btn" type="submit"><button>Acceder</button></a>
@@ -115,6 +115,47 @@
     const data = Object.fromEntries(formData.entries());
 
     fetch('/register', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    })
+    .then(response => response.json())
+    .then(result => {
+      if (result.redirect === "/logout") {
+        Swal.fire({
+          icon: 'warning',
+          title: 'Datos incorrectos',
+          text: result.message,
+          showConfirmButton: false,
+          timer: 2000
+        }).then(() => {
+          window.location.href = result.redirect;
+        });
+      } else {
+        Swal.fire({
+          icon: 'success',
+          title: 'Datos correctos',
+          text: result.message,
+          showConfirmButton: false,
+          timer: 2000
+        }).then(() => {
+          window.location.href = result.redirect;
+        });
+      }
+    })
+  });
+
+
+
+  document.getElementById('registerForm2').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const formData = new FormData(this);
+    const data = Object.fromEntries(formData.entries());
+
+    fetch('/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

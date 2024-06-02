@@ -41,7 +41,10 @@
                                 <td class="texto"><%= zapasss[i].descripcion %></td>
                                 <td>
                                 <div class="popup3">
-                                    <a class="btn" type="submit" id="botoncomprar" href="#popup4">Comprar</a>
+                                    <% if (login) { %>
+                                        <a class="btn" type="submit" id="botoncomprar" href="#popup4">Comprar</a>
+                                    <% } else { %>
+                                    <% } %>
                                     <div id="popup4" class="cajon-popup">
                                         <div class="popup6">
                                             <h1>Detalles de la compra</h1>

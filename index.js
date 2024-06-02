@@ -43,3 +43,7 @@ api.use("/",mainrouter)
 api.listen(port,()=>{
     console.log("server listening on port "+port)
 })
+
+api.use((req, res, next)=> {
+    res.status(404).render('404')
+})

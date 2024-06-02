@@ -4,6 +4,8 @@ const mainrouter = Router()
 const Stripe = require("stripe")
 const { STRIPE_PRIVATE_KEY} = require('../keys.js')
 const Swal = require('sweetalert2')
+const bcrypt = require('bcrypt')
+const saltRounds = 10
 
 const stripe = new Stripe(STRIPE_PRIVATE_KEY)
 
@@ -140,7 +142,8 @@ mainrouter.post("/register", async (req,res) => {
         if(check2[0].length > 0){
             return res.status(400).json({ message: 'Correo ya existente', redirect: '/logout' });
         }else{
-            const [result] = await pool.execute(' INSERT INTO usuarios (username, gmail, contraseña) VALUES (?, ?, ?)', [username, gmail, contraseña])
+            const hsashedPassword = await bcrypt.hash(contraseña, saltRounds)
+            const [result] = await pool.execute(' INSERT INTO usuarios (username, gmail, contraseña) VALUES (?, ?, ?)', [username, gmail, hsashedPassword])
 
             return res.status(200).json({ message: 'Usuario registrado correctamente', redirect: '/' });
         }
@@ -161,24 +164,12 @@ mainrouter.post("/login", async (req,res) => {
         req.session.loggedin = true
         req.session.username = req.body.username
         if(req.session.loggedin){
-            res.render("main", {zapass,marcaprincii,
-                login: true,
-                username: req.session.username
-            })
-            console.log("estas logueado")
-            console.log(req.session.username)
+            return res.status(200).json({ message: 'Usuario registrado correctamente', redirect: '/' });    
         }else{
-            res.render("main", {zapass,marcaprincii,
-                login:false,
-                username: 'Inicia sesion'
-            })
-            console.log("todo mal")
-            console.log(req.session.username)
-
+            return res.status(400).json({ message: 'Usuario o contraseña incorrectos', redirect: '/logout' });
         }
     }else{
-        res.redirect('/')
-        console.log("mal")     
+        return res.status(400).json({ message: 'Usuario o contraseña incorrectos', redirect: '/logout' });     
     }
 } )
 
