@@ -253,4 +253,9 @@
     width: 300px;
     height: 150px;
   }
+}
+@media screen and (max-width: 2000px) {
+  .gif1 {
+    left: 550px;
+  }
 }/*# sourceMappingURL=principal.css.map */

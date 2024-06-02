@@ -255,4 +255,10 @@ body {
   .vistasneakers .compra .informacion .info .popup3 .cajon-popup .popup6 .recibo a button {
     margin-left: 60px;
   }
+}
+@media screen and (max-width: 2000px) {
+  .vistasneakers .gif4 {
+    top: 100px;
+    left: 550px;
+  }
 }/*# sourceMappingURL=vistazapas.css.map */
