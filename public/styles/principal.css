@@ -225,6 +225,11 @@
     height: 150px;
     margin: 10px;
   }
+  .cuerpo .body1 .popu .marcapopu .fotos .foto2 h1 {
+    left: 10px;
+    width: 200px;
+    bottom: 15px;
+  }
   .cuerpo .body1 .popu .marcapopu .titulo {
     width: 90%;
     border: none;

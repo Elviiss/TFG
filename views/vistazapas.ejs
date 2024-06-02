@@ -13,7 +13,8 @@
     <link rel="stylesheet" href="/styles/header.css">
     <link rel="stylesheet" href="/styles/footer.css">
     <link rel="stylesheet" href="/styles/vistazapas.css">
-    <title>Document</title>
+    <title>Flaffy Flair</title>
+    <link rel="website icon" href="/sources/logofinal2.png">
 </head>
 <body>
     <%- include('./header.ejs') %>
@@ -82,7 +83,7 @@
 </body>
 
 <script>
-
+    //...........FUNCIÓN PARA SELECCIONAR LA TALLA Y MOSTRAR EL BOTON SI ESTA DISPONIBLE O NO
     function capturar(){
         var h3 =parseInt
         h3 =document.getElementById('_talla').value
@@ -106,6 +107,8 @@
         }
     }
 
+
+    //........ESTOS DATOS SE ALMACENAN Y SE LLEVAN A LA RUTA DE PAGO MEDIANTE LA FUNCIÓN DE ABAJO, QUE LOS RECOGE CON UN CLICK
     const button = document.getElementById('checkout')
     const p =document.getElementById('_producto')
     const h1 =document.getElementById('_descripcion')
